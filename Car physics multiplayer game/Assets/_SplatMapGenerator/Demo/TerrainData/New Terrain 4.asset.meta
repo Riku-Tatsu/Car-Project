@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e72ca9f815154233b226a5e6b6deca9
+labels:
+- terrain
+- generator
+- splat
+- map
+- splatmap
+- demo
+timeCreated: 1446028912
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

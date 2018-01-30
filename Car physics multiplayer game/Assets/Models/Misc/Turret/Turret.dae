@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.79.0 commit date:2017-09-11, commit time:10:43, hash:5bd8ac9</authoring_tool>
+    </contributor>
+    <created>2017-12-28T14:58:20</created>
+    <modified>2017-12-28T14:58:20</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="grey-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.07111925 0.07365165 0.07570064 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Green-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.05994385 0.171228 0.02553884 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Red-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.002972255 0 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="grey-material" name="grey">
+      <instance_effect url="#grey-effect"/>
+    </material>
+    <material id="Green-material" name="Green">
+      <instance_effect url="#Green-effect"/>
+    </material>
+    <material id="Red-material" name="Red">
+      <instance_effect url="#Red-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Circle-mesh" name="Circle">
+      <mesh>
+        <source id="Circle-mesh-positions">
+          <float_array id="Circle-mesh-positions-array" count="303">0 0.7007058 0.5360577 -0.4954738 0.4954738 0.5360577 -0.7007058 0 0.5360577 -0.4954738 -0.4954738 0.5360577 0 -0.7007058 0.5360577 0.4954739 -0.4954738 0.5360577 0.7007058 0 0.5360577 0.4954739 0.4954738 0.5360577 0 0.7007058 0.009746909 -0.4954738 0.4954738 0.009746909 -0.7007058 0 0.009746909 -0.4954738 -0.4954738 0.009746909 0 -0.7007058 0.009746909 0.4954739 -0.4954738 0.009746909 0.7007058 0 0.009746909 0.4954739 0.4954738 0.009746909 -1.052048 -1.06368 0.4874942 -1.052048 -1.06368 1.797542 -1.052048 1.040417 0.4874942 -1.052048 1.040417 1.797542 1.052048 -1.06368 0.4874942 1.052048 -1.06368 1.797542 1.052048 1.040417 0.4874942 1.052048 1.040417 1.797542 0 -2.772731 1.235887 -0.1683923 -2.772731 1.166137 -0.2381427 -2.772731 0.9977445 -0.1683923 -2.772731 0.8293522 0 -2.772731 0.7596018 0.1683924 -2.772731 0.8293522 0.2381427 -2.772731 0.9977445 0.1683924 -2.772731 1.166137 0 -1.320504 1.235887 -0.1683923 -1.320504 1.166137 -0.2381427 -1.320504 0.9977445 -0.1683923 -1.320504 0.8293522 0 -1.320504 0.7596018 0.1683924 -1.320504 0.8293522 0.2381427 -1.320504 0.9977445 0.1683924 -1.320504 1.166137 -0.7655488 -1.381537 0.665874 -0.7655488 -1.381537 1.619162 0.7655488 -1.381537 1.619162 0.7655488 -1.381537 0.665874 0 -2.772731 1.175361 -0.125594 -2.772731 1.123338 -0.1776167 -2.772731 0.9977445 -0.125594 -2.772731 0.8721505 0 -2.772731 0.8201278 0.125594 -2.772731 0.8721505 0.1776167 -2.772731 0.9977445 0.125594 -2.772731 1.123338 0 -1.675601 1.175361 -0.125594 -1.675601 1.123338 -0.1776167 -1.675601 0.9977445 -0.125594 -1.675601 0.8721505 0 -1.675601 0.8201278 0.125594 -1.675601 0.8721505 0.1776167 -1.675601 0.9977445 0.125594 -1.675601 1.123338 0 -2.609638 1.324392 -0.02782046 -2.609638 1.312869 -0.03934413 -2.609638 1.285048 -0.02782046 -2.609638 1.257228 0 -2.609638 1.245704 0.02782052 -2.609638 1.257228 0.03934419 -2.609638 1.285048 0.02782052 -2.609638 1.312869 0 -2.369712 1.324392 -0.02782046 -2.369712 1.312869 -0.03934413 -2.369712 1.285048 -0.02782046 -2.369712 1.257228 0 -2.369712 1.245704 0.02782052 -2.369712 1.257228 0.03934419 -2.369712 1.285048 0.02782052 -2.369712 1.312869 0 -2.609638 1.314393 -0.02074968 -2.609638 1.305798 -0.02934449 -2.609638 1.285048 -0.02074968 -2.609638 1.264298 0 -2.609638 1.255704 0.02074974 -2.609638 1.264298 0.02934449 -2.609638 1.285048 0.02074974 -2.609638 1.305798 0 -2.58619 1.314393 -0.02074968 -2.58619 1.305798 -0.02934449 -2.58619 1.285048 -0.02074968 -2.58619 1.264298 0 -2.58619 1.255704 0.02074974 -2.58619 1.264298 0.02934449 -2.58619 1.285048 0.02074974 -2.58619 1.305798 0 -2.618942 1.285048 -0.05020248 -2.525553 1.185 -0.05020248 -2.525553 1.336868 -0.05020248 -2.451775 1.185 -0.05020248 -2.451775 1.336868 0.05020248 -2.525553 1.185 0.05020248 -2.525553 1.336868 0.05020248 -2.451775 1.185 0.05020248 -2.451775 1.336868</float_array>
+          <technique_common>
+            <accessor source="#Circle-mesh-positions-array" count="101" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Circle-mesh-normals">
+          <float_array id="Circle-mesh-normals-array" count="174">1 0 0 0.7071068 0.7071068 0 0 -1 0 0.7071068 -0.7071068 0 -1 0 0 -0.7071068 -0.7071068 0 0 1 0 -0.7071068 0.7071068 0 -0.6764617 -0.340413 0.6530839 -0.5773503 0.5773503 -0.5773503 -0.6764617 -0.340413 -0.6530839 -0.5773503 0.5773503 0.5773503 0.5773503 0.5773503 -0.5773503 0.5773503 0.5773503 0.5773503 0.6764617 -0.340413 -0.6530839 -0.3127908 -0.8529493 -0.4178988 0.6764617 -0.340413 0.6530839 0.7763856 -0.6302583 0 0.7071068 0 0.7071068 0.5489864 -0.6302602 0.5489864 0 -0.6302583 -0.7763856 0.7071068 0 -0.7071068 0.5489864 -0.6302602 -0.5489864 -0.5489864 -0.6302602 -0.5489864 -0.7071068 0 -0.7071068 0 -0.6302583 0.7763856 -0.7071068 0 0.7071068 -0.5489864 -0.6302602 0.5489864 0 0 1 0 0 -1 -0.7763856 -0.6302583 0 0.3127908 -0.8529493 0.4178988 0.3127908 -0.8529493 -0.4178988 -0.3127908 -0.8529493 0.4178988 -0.4202846 -0.80419 -0.4202846 -0.5943697 -0.8041921 0 -0.4202846 -0.80419 0.4202846 0 -0.8041921 0.5943697 0.4202846 -0.80419 0.4202846 0.5943697 -0.8041921 0 0 -0.8041921 -0.5943697 0.4202846 -0.80419 -0.4202846 0.5489864 0.6302602 0.5489864 0.5489864 0.6302602 -0.5489864 -0.7763856 0.6302583 0 -0.5489864 0.6302602 -0.5489864 -0.5489864 0.6302602 0.5489864 0 0.6302583 0.7763856 0.7763856 0.6302583 0 0 0.6302583 -0.7763856 -0.3716319 -0.8507524 -0.3716319 -0.3716373 -0.8507342 0.3716678 0.3716319 -0.8507524 0.3716319 0.3716319 -0.8507524 -0.3716319 -0.5255917 -0.850737 0 0 -0.850737 0.5255917 0.5255917 -0.850737 0 0 -0.850737 -0.5255917</float_array>
+          <technique_common>
+            <accessor source="#Circle-mesh-normals-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Circle-mesh-vertices">
+          <input semantic="POSITION" source="#Circle-mesh-positions"/>
+        </vertices>
+        <triangles material="grey-material" count="136">
+          <input semantic="VERTEX" source="#Circle-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Circle-mesh-normals" offset="1"/>
+          <p>6 0 15 1 7 1 4 2 13 3 5 3 2 4 11 5 3 5 0 6 9 7 1 7 7 1 8 6 0 6 5 3 14 0 6 0 3 5 12 2 4 2 1 7 10 4 2 4 30 17 39 18 31 19 28 20 37 21 29 22 27 23 34 4 35 24 24 25 33 26 25 27 31 19 32 28 24 25 29 22 38 0 30 17 27 23 36 29 28 20 25 27 34 4 26 30 30 17 51 34 50 35 28 20 49 36 48 37 26 30 47 38 46 39 25 27 44 40 24 25 31 19 44 40 51 34 30 17 49 36 29 22 28 20 47 38 27 23 26 30 45 41 25 27 44 40 59 23 51 34 50 35 57 27 49 36 48 37 55 19 47 38 46 39 53 22 45 41 51 34 58 30 50 35 49 36 56 25 48 37 47 38 54 17 46 39 45 41 52 20 44 40 56 25 58 30 52 20 66 17 75 42 67 19 64 20 73 43 65 22 63 23 70 44 71 45 60 25 69 46 61 27 67 19 68 47 60 25 65 22 74 48 66 17 63 23 72 49 64 20 61 27 70 44 62 30 67 19 82 35 66 17 64 20 81 36 80 37 63 23 78 39 62 30 61 27 76 40 60 25 67 19 76 40 83 34 65 22 82 35 81 36 64 20 79 38 63 23 61 27 78 39 77 41 76 40 91 50 83 34 82 35 89 51 81 36 80 37 87 52 79 38 78 39 85 53 77 41 83 34 90 54 82 35 81 36 88 55 80 37 79 38 86 56 78 39 77 41 84 57 76 40 74 48 72 49 70 44 94 4 95 4 93 4 96 6 99 6 95 6 100 0 97 0 99 0 98 2 93 2 97 2 99 29 93 29 95 29 96 28 98 28 100 28 6 0 14 0 15 1 4 2 12 2 13 3 2 4 10 4 11 5 0 6 8 6 9 7 7 1 15 1 8 6 5 3 13 3 14 0 3 5 11 5 12 2 1 7 9 7 10 4 30 17 38 0 39 18 28 20 36 29 37 21 27 23 26 30 34 4 24 25 32 28 33 26 31 19 39 18 32 28 29 22 37 21 38 0 27 23 35 24 36 29 25 27 33 26 34 4 30 17 31 19 51 34 28 20 29 22 49 36 26 30 27 23 47 38 25 27 45 41 44 40 31 19 24 25 44 40 30 17 50 35 49 36 28 20 48 37 47 38 26 30 46 39 45 41 44 40 52 20 59 23 50 35 58 30 57 27 48 37 56 25 55 19 46 39 54 17 53 22 51 34 59 23 58 30 49 36 57 27 56 25 47 38 55 19 54 17 45 41 53 22 52 20 52 20 53 22 54 17 54 17 55 19 56 25 56 25 57 27 58 30 58 30 59 23 52 20 52 20 54 17 56 25 66 17 74 48 75 42 64 20 72 49 73 43 63 23 62 30 70 44 60 25 68 47 69 46 67 19 75 42 68 47 65 22 73 43 74 48 63 23 71 45 72 49 61 27 69 46 70 44 67 19 83 34 82 35 64 20 65 22 81 36 63 23 79 38 78 39 61 27 77 41 76 40 67 19 60 25 76 40 65 22 66 17 82 35 64 20 80 37 79 38 61 27 62 30 78 39 76 40 84 57 91 50 82 35 90 54 89 51 80 37 88 55 87 52 78 39 86 56 85 53 83 34 91 50 90 54 81 36 89 51 88 55 79 38 87 52 86 56 77 41 85 53 84 57 70 44 69 46 68 47 68 47 75 42 70 44 74 48 73 43 72 49 72 49 71 45 70 44 70 44 75 42 74 48 94 4 96 4 95 4 96 6 100 6 99 6 100 0 98 0 97 0 98 2 94 2 93 2 99 29 97 29 93 29 96 28 94 28 98 28</p>
+        </triangles>
+        <triangles material="Green-material" count="20">
+          <input semantic="VERTEX" source="#Circle-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Circle-mesh-normals" offset="1"/>
+          <p>17 8 18 9 16 10 19 11 22 12 18 9 23 13 20 14 22 12 20 14 40 15 16 10 22 12 16 10 18 9 19 11 21 16 23 13 42 31 40 15 43 32 17 8 42 31 21 16 21 16 43 32 20 14 16 10 41 33 17 8 17 8 19 11 18 9 19 11 23 13 22 12 23 13 21 16 20 14 20 14 43 32 40 15 22 12 20 14 16 10 19 11 17 8 21 16 42 31 41 33 40 15 17 8 41 33 42 31 21 16 42 31 43 32 16 10 40 15 41 33</p>
+        </triangles>
+        <triangles material="Red-material" count="8">
+          <input semantic="VERTEX" source="#Circle-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Circle-mesh-normals" offset="1"/>
+          <p>91 50 84 57 92 2 87 52 88 55 92 2 85 53 86 56 92 2 88 55 89 51 92 2 84 57 85 53 92 2 89 51 90 54 92 2 90 54 91 50 92 2 86 56 87 52 92 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Circle" name="Circle" type="NODE">
+        <matrix sid="transform">0.1319252 0 0 0 0 0.1319252 0 0 0 0 0.1319252 0 0 0 0 1</matrix>
+        <instance_geometry url="#Circle-mesh" name="Circle">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="grey-material" target="#grey-material"/>
+              <instance_material symbol="Green-material" target="#Green-material"/>
+              <instance_material symbol="Red-material" target="#Red-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

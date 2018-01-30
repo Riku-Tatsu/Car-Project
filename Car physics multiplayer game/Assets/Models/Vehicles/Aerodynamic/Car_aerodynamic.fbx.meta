@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 1f8b4a48352783442a90a69fc03422a4
+timeCreated: 1514429524
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: chassi
+    100004: COLLIDERS
+    100006: COLLISION
+    100008: VISUALS
+    100010: WC_LF
+    100012: WC_LR
+    100014: WC_RF
+    100016: WC_RR
+    100018: wheel_LF
+    100020: wheel_LR
+    100022: wheel_RF
+    100024: wheel_RR
+    400000: //RootNode
+    400002: chassi
+    400004: COLLIDERS
+    400006: COLLISION
+    400008: VISUALS
+    400010: WC_LF
+    400012: WC_LR
+    400014: WC_RF
+    400016: WC_RR
+    400018: wheel_LF
+    400020: wheel_LR
+    400022: wheel_RF
+    400024: wheel_RR
+    2300000: chassi
+    2300002: COLLISION
+    2300004: wheel_LF
+    2300006: wheel_LR
+    2300008: wheel_RF
+    2300010: wheel_RR
+    3300000: chassi
+    3300002: COLLISION
+    3300004: wheel_LF
+    3300006: wheel_LR
+    3300008: wheel_RF
+    3300010: wheel_RR
+    4300000: wheel_RF
+    4300002: wheel_RR
+    4300004: wheel_LR
+    4300006: wheel_LF
+    4300008: chassi
+    4300010: COLLISION
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: c3b307267dc6b4b44b5fabf7662c187a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lights
+    second: {fileID: 2100000, guid: 60b34f9b679653a4da06b02887f18732, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: primary
+    second: {fileID: 2100000, guid: f7eb4fa89f816ab4cba8392950bd7083, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tyre
+    second: {fileID: 2100000, guid: bc34aa2236363864f8151c7a1916adca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows
+    second: {fileID: 2100000, guid: 96dbdfa5232b2924aadc2b6d533026cc, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

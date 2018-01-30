@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: e54c158c1f4bdc8459c0dfb301853f98
+timeCreated: 1517022846
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: arm_LF
+    100002: arm_LR
+    100004: arm_RF
+    100006: arm_RR
+    100008: armTgt_LF
+    100010: armTgt_LR
+    100012: armTgt_RF
+    100014: armTgt_RR
+    100016: axel_front
+    100018: axel_rear
+    100020: brake1_left
+    100022: brake1_right
+    100024: brake2_left
+    100026: brake2_right
+    100028: chassis
+    100030: chassisCOL
+    100032: Colliders
+    100034: diff_axel_front
+    100036: diff_axel_rear
+    100038: diff_centre_front
+    100040: diff_centre_rear
+    100042: Dynamics
+    100044: Dynamics_Skeleton
+    100046: exhaust1_left
+    100048: exhaust1_right
+    100050: exhaust2_left
+    100052: exhaust2_right
+    100054: headlight_left
+    100056: headlight_right
+    100058: hub_LF
+    100060: hub_LR
+    100062: hub_RF
+    100064: hub_RR
+    100066: Lightflares
+    100068: //RootNode
+    100070: reverse_left
+    100072: reverse_right
+    100074: ROOT
+    100076: shaft_axel_front
+    100078: shaft_axel_rear
+    100080: shaft_centre_front
+    100082: shaft_centre_rear
+    100084: springDn_LF
+    100086: springDn_LR
+    100088: springDn_RF
+    100090: springDn_RR
+    100092: springUp_LF
+    100094: springUp_LR
+    100096: springUp_RF
+    100098: springUp_RR
+    100100: Visuals
+    100102: wheel_LF
+    100104: wheel_LF 1
+    100106: wheel_LR
+    100108: wheel_LR 1
+    100110: wheel_RF
+    100112: wheel_RF 1
+    100114: wheel_RR
+    100116: wheel_RR 1
+    100118: wheelCOL
+    100120: wheels
+    100122: Wheels
+    100124: arm_LF_end
+    100126: arm_LR_end
+    100128: arm_RF_end
+    100130: arm_RR_end
+    100132: armTgt_LF_end
+    100134: armTgt_LR_end
+    100136: armTgt_RF_end
+    100138: armTgt_RR_end
+    100140: Circle.001
+    100142: Circle.002
+    100144: Cube.000
+    100146: Cube.001
+    100148: Cube.003
+    100150: Cube.004
+    100152: Cube.005
+    100154: diff_axel_front_end
+    100156: diff_axel_rear_end
+    100158: diff_centre_front_end
+    100160: diff_centre_rear_end
+    100162: dummycar
+    100164: Dynamics.001
+    100166: shaft_axel_front_end
+    100168: shaft_axel_rear_end
+    100170: shaft_centre_front_end
+    100172: shaft_centre_rear_end
+    100174: springDn_LF_end
+    100176: springDn_LR_end
+    100178: springDn_RF_end
+    100180: springDn_RR_end
+    100182: springUp_LF_end
+    100184: springUp_LR_end
+    100186: springUp_RF_end
+    100188: springUp_RR_end
+    100190: Sun
+    100192: SunGround
+    100194: SunSky
+    100196: wheel_LF.001
+    100198: wheel_LF_end
+    100200: wheel_LR_end
+    100202: wheel_RF_end
+    100204: wheel_RR_end
+    100206: wheels.001
+    100208: wheels.002
+    400000: arm_LF
+    400002: arm_LR
+    400004: arm_RF
+    400006: arm_RR
+    400008: armTgt_LF
+    400010: armTgt_LR
+    400012: armTgt_RF
+    400014: armTgt_RR
+    400016: axel_front
+    400018: axel_rear
+    400020: brake1_left
+    400022: brake1_right
+    400024: brake2_left
+    400026: brake2_right
+    400028: chassis
+    400030: chassisCOL
+    400032: Colliders
+    400034: diff_axel_front
+    400036: diff_axel_rear
+    400038: diff_centre_front
+    400040: diff_centre_rear
+    400042: Dynamics
+    400044: Dynamics_Skeleton
+    400046: exhaust1_left
+    400048: exhaust1_right
+    400050: exhaust2_left
+    400052: exhaust2_right
+    400054: headlight_left
+    400056: headlight_right
+    400058: hub_LF
+    400060: hub_LR
+    400062: hub_RF
+    400064: hub_RR
+    400066: Lightflares
+    400068: //RootNode
+    400070: reverse_left
+    400072: reverse_right
+    400074: ROOT
+    400076: shaft_axel_front
+    400078: shaft_axel_rear
+    400080: shaft_centre_front
+    400082: shaft_centre_rear
+    400084: springDn_LF
+    400086: springDn_LR
+    400088: springDn_RF
+    400090: springDn_RR
+    400092: springUp_LF
+    400094: springUp_LR
+    400096: springUp_RF
+    400098: springUp_RR
+    400100: Visuals
+    400102: wheel_LF
+    400104: wheel_LF 1
+    400106: wheel_LR
+    400108: wheel_LR 1
+    400110: wheel_RF
+    400112: wheel_RF 1
+    400114: wheel_RR
+    400116: wheel_RR 1
+    400118: wheelCOL
+    400120: wheels
+    400122: Wheels
+    400124: arm_LF_end
+    400126: arm_LR_end
+    400128: arm_RF_end
+    400130: arm_RR_end
+    400132: armTgt_LF_end
+    400134: armTgt_LR_end
+    400136: armTgt_RF_end
+    400138: armTgt_RR_end
+    400140: Circle.001
+    400142: Circle.002
+    400144: Cube.000
+    400146: Cube.001
+    400148: Cube.003
+    400150: Cube.004
+    400152: Cube.005
+    400154: diff_axel_front_end
+    400156: diff_axel_rear_end
+    400158: diff_centre_front_end
+    400160: diff_centre_rear_end
+    400162: dummycar
+    400164: Dynamics.001
+    400166: shaft_axel_front_end
+    400168: shaft_axel_rear_end
+    400170: shaft_centre_front_end
+    400172: shaft_centre_rear_end
+    400174: springDn_LF_end
+    400176: springDn_LR_end
+    400178: springDn_RF_end
+    400180: springDn_RR_end
+    400182: springUp_LF_end
+    400184: springUp_LR_end
+    400186: springUp_RF_end
+    400188: springUp_RR_end
+    400190: Sun
+    400192: SunGround
+    400194: SunSky
+    400196: wheel_LF.001
+    400198: wheel_LF_end
+    400200: wheel_LR_end
+    400202: wheel_RF_end
+    400204: wheel_RR_end
+    400206: wheels.001
+    400208: wheels.002
+    2300000: chassis
+    2300002: chassisCOL
+    2300004: wheelCOL
+    2300006: Circle.001
+    2300008: Circle.002
+    2300010: Cube.000
+    2300012: Cube.001
+    2300014: Cube.003
+    2300016: Cube.004
+    2300018: Cube.005
+    2300020: dummycar
+    2300022: wheel_LF.001
+    2300024: wheels.001
+    2300026: wheels.002
+    3300000: chassis
+    3300002: chassisCOL
+    3300004: wheelCOL
+    3300006: Circle.001
+    3300008: Circle.002
+    3300010: Cube.000
+    3300012: Cube.001
+    3300014: Cube.003
+    3300016: Cube.004
+    3300018: Cube.005
+    3300020: dummycar
+    3300022: wheel_LF.001
+    3300024: wheels.001
+    3300026: wheels.002
+    4300000: wheelCOL
+    4300002: chassisCOL
+    4300004: Dynamics
+    4300006: wheels
+    4300008: chassis
+    4300010: Wheels
+    4300012: Dynamics.001
+    4300014: Cube.000
+    4300016: Cube.005
+    4300018: Cube.004
+    4300020: wheel_LF.001
+    4300022: Cube.003
+    4300024: Cube.001
+    4300026: Circle.002
+    4300028: Circle.001
+    4300030: dummycar
+    4300032: wheels.002
+    4300034: wheels.001
+    9500000: //RootNode
+    10800000: Sun
+    10800002: SunGround
+    10800004: SunSky
+    13700000: Dynamics
+    13700002: wheels
+    13700004: Wheels
+    13700006: Dynamics.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COL
+    second: {fileID: 2100000, guid: d9069641695e23c489f084b7ab6bc47c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 0aecc1fc264a0fc48a0147189df03e42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrome
+    second: {fileID: 2100000, guid: 18e2b46b4b794de47a82298c40333915, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lights
+    second: {fileID: 2100000, guid: f5b5afd7d883b1c41b335ed6fba9cf0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: misc
+    second: {fileID: 2100000, guid: 795554133fb81fb4b9cb6ad592ad34f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paint
+    second: {fileID: 2100000, guid: 103cd6a6766a9274da7601c3838ca740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rim
+    second: {fileID: 2100000, guid: 0b879ce3101b73642b3a032fb3e6fd65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rubber
+    second: {fileID: 2100000, guid: 450dc670191fa0247b71d8af0b07ebb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: springs
+    second: {fileID: 2100000, guid: 5562daaeb72b01a48a698475bb99a92a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: taillight
+    second: {fileID: 2100000, guid: 558fc14d8d9c5a24d927a3b6e2c1ad5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows
+    second: {fileID: 2100000, guid: 067ac87a0e2887444bcc4005354d0c0a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
