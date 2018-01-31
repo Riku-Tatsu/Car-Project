@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LivingParticleFloor_10Gamma
+  m_Shader: {fileID: 4800000, guid: 87f7297eebdfd984b858c7480aac13b6, type: 3}
+  m_ShaderKeywords: _CAMERAFADEENABLED_ON _CLOSEFADEENABLED_ON _KEYWORD0_ON _LOCKYOFFSET_ON
+    _OFFSETYLOCK_ON _RAMPENABLED_ON _USEPIXELDISTANCE_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 7d502ed7a3be3fe41ae3d2faabf1d93c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FinalTexture:
+        m_Texture: {fileID: 2800000, guid: 62d9599249450c8429af1f6d79f04bf7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicSmoothness:
+        m_Texture: {fileID: 2800000, guid: fe9a99554ef230544b2a76f2ce6a9f2b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise01:
+        m_Texture: {fileID: 2800000, guid: e16f8e2dd5ea82044bade391afc45676, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise02:
+        m_Texture: {fileID: 2800000, guid: fe9b27216f3b18f499e61ce73ae8dad2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseDistortion:
+        m_Texture: {fileID: 2800000, guid: 19bfab0886d4ce348ba29f17a191277b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 10016d23a500d8143877ca2f84ce609a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParticleTexture:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 2800000, guid: 26b54cae86d50d04f9d262e6e4258c77, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 7150651ef88cabe44a1406ee9f810786, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex4coord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex4coord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _CameraFadeDistance: 1
+    - _CameraFadeEnabled: 1
+    - _CameraFadeOffset: 0.2
+    - _CloseFadeDistance: 0.75
+    - _CloseFadeEnabled: 1
+    - _Distance: 1.75
+    - _DistancePower: 1
+    - _FadeCloseDistance: 0.65
+    - _FinalExp: 2
+    - _FinalMaskMultiply: 3
+    - _FinalPower: 0
+    - _FinalPower2: 1.5
+    - _IgnoreYAxis: 0
+    - _InvFade: 1
+    - _LockYOffset: 1
+    - _Metallic: 1
+    - _MetallicSmoothnessRandomOffset: 0
+    - _Noise01ScrollSpeed: 0.08
+    - _Noise02ScrollSpeed: 0.12
+    - _NoiseDistortionPower: 0.2
+    - _NoiseDistortionScrollSpeed: 0.04
+    - _NoisePower: 2.25
+    - _NoiseTiling: 0.05
+    - _OffsetPower: -1
+    - _OffsetYLock: 1
+    - _RampEnabled: 1
+    - _Smoothness: 1
+    - _SoftParticleDistance: 0.25
+    - _Tiling: 0.2
+    - _ToggleSwitch0: 0
+    - _UsePixelDistance: 1
+    - __dirty: 0
+    m_Colors:
+    - _Affector: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 1, g: 1, b: 1, a: 1}
+    - _FinalColor: {r: 1, g: 0, b: 0, a: 1}
+    - _FinalColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _FinalUnlitColor: {r: 0, g: 0, b: 0, a: 1}
+    - _TintColor: {r: 1, g: 0, b: 0, a: 0.5}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 0}
