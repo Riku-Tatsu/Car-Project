@@ -15,18 +15,19 @@ public class Camera_Chase : MonoBehaviour {
 	public float dampingDistance = 2.0f;
 
 	[Header("Limits")]
-	public float pitchMin = -70.0f;
 	public float pitchMax = 85.0f;
+	public float pitchMin = -70.0f;
+
 
 	Vector3 dummyDir;
 	Vector3 prevPos;
-	Vector3 prevDummyDir;
+	Vector3 FlattenedDummyDir;
 
 	void Start ()
 	{
 		dummyDir = target.forward;
 		prevPos = target.position + -dummyDir * dampingDistance;
-		prevDummyDir = dummyDir;
+		FlattenedDummyDir = Vector3.ProjectOnPlane(dummyDir, Vector3.up);
 	}
 	
 	void LateUpdate ()
@@ -38,29 +39,37 @@ public class Camera_Chase : MonoBehaviour {
 
 		dummyDir = (prevPos - target.position).normalized;
 
-		Vector3 dirFlattened = Vector3.ProjectOnPlane(dummyDir, Vector3.up);
+		Vector3 dirFlattened = Vector3.ProjectOnPlane(dummyDir, Vector3.up).normalized;
 		float dummyAngle = (dummyDir.y >= 0 ? Mathf.Atan2(dummyDir.y, 1 - dummyDir.y) : Mathf.Atan2(dummyDir.y, 1 + dummyDir.y) ) * Mathf.Rad2Deg;
+		dummyAngle = Vector3.Angle(dummyDir, dirFlattened) * Mathf.Sign(dummyDir.y);
 
-		bool hasFlipped = Mathf.Sign(dummyDir.x) != Mathf.Sign(prevDummyDir.x) && Mathf.Sign(dummyDir.z) != Mathf.Sign(prevDummyDir.z);
-		bool fixPitch = dummyAngle >= pitchMax || dummyAngle < pitchMin;
+		float maxAngle = Mathf.Clamp(pitchMax + pitch, 0, pitchMax);
+		float minAngle = Mathf.Clamp(pitchMin - pitch, 0, pitchMin);
+
+		bool hasFlipped = Mathf.Sign(dummyDir.x) != Mathf.Sign(FlattenedDummyDir.x) && Mathf.Sign(dummyDir.z) != Mathf.Sign(FlattenedDummyDir.z);
+		bool fixPitch = dummyAngle > maxAngle || dummyAngle < minAngle;
 
 		if(hasFlipped || fixPitch)
 		{
 			dummyDir = -target.forward;
 
-			Vector3 correctedDir = Vector3.ProjectOnPlane(prevDummyDir, Vector3.up).normalized;
+			Vector3 correctedDir = FlattenedDummyDir;//Vector3.ProjectOnPlane(FlattenedDummyDir, Vector3.up).normalized;
 			Vector3 correctedDirRight = Quaternion.AngleAxis(-90, Vector3.up) * correctedDir;
 
+			Debug.DrawRay(transform.position, correctedDir, Color.white, 0, false);
+			Debug.DrawRay(transform.position, correctedDirRight, Color.red, 0, false);
+
 			Vector3 newDir = correctedDir;
-			if (dummyAngle > pitchMax)
+
+			if (dummyAngle > maxAngle)
 			{
-				newDir = Quaternion.AngleAxis(pitchMax - 1, correctedDirRight) * correctedDir;
+				newDir = Quaternion.AngleAxis(maxAngle, correctedDirRight) * correctedDir;
 
 				Debug.Log("Fixed Max Pitch, dummy angle " + dummyAngle);
 			}
-			else if(dummyAngle < pitchMin)
+			else if(dummyAngle < maxAngle)
 			{
-				newDir = Quaternion.AngleAxis(pitchMin + 1, correctedDirRight) * correctedDir;
+				newDir = Quaternion.AngleAxis(minAngle, correctedDirRight) * correctedDir;
 
 				Debug.Log("Fixed Min Pitch, dummy angle " + dummyAngle);
 			}
@@ -68,13 +77,13 @@ public class Camera_Chase : MonoBehaviour {
 			dummyDir = newDir;
 		}
 		prevPos = target.position + dummyDir * dampingDistance;
-		prevDummyDir = dummyDir;
+		FlattenedDummyDir = Vector3.ProjectOnPlane(dummyDir, Vector3.up).normalized; ;
 
 		Vector3 xDir = Vector3.ProjectOnPlane(-dummyDir, Vector3.up).normalized;
 		xDir = Quaternion.AngleAxis(90, Vector3.up) * xDir;
 
-		Debug.DrawRay(transform.position, xDir, Color.red, 0, false);
-		Debug.DrawRay(transform.position, -dummyDir, Color.blue, 0, false);
+		//Debug.DrawRay(transform.position, xDir, Color.red, 0, false);
+		//Debug.DrawRay(transform.position, -dummyDir, Color.blue, 0, false);
 
 		Quaternion finalRotation = Quaternion.LookRotation(-dummyDir, Vector3.up);
 
