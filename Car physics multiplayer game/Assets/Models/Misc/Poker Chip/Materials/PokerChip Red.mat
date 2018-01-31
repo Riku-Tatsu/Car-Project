@@ -64,7 +64,7 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _MetallicConcentration: 4
-    - _MetallicFlakes: 0.05
+    - _MetallicFlakes: 0.01
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02

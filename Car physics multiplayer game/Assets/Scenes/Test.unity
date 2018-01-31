@@ -4071,7 +4071,6 @@ GameObject:
   - component: {fileID: 1586862661}
   - component: {fileID: 1586862660}
   - component: {fileID: 1586862659}
-  - component: {fileID: 1586862662}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -4133,6 +4132,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1586862662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4144,6 +4144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0634f943d5c74c3a8412d12a5978c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> fef251a4892f4a670efa6d1d5dce9017de0718ed
 --- !u!1001 &1630272750
 Prefab:
   m_ObjectHideFlags: 0
