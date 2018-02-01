@@ -4128,13 +4128,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of fef251a... Grass adjustments
-=======
->>>>>>> cdb6890faaacdc1a4150fe6307179cb7832be78f
 --- !u!114 &1586862662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4146,16 +4139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0634f943d5c74c3a8412d12a5978c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fef251a4892f4a670efa6d1d5dce9017de0718ed
-=======
-=======
->>>>>>> parent of fef251a... Grass adjustments
-=======
->>>>>>> cdb6890faaacdc1a4150fe6307179cb7832be78f
   terrain: {fileID: 1586862660}
   terrain_data: {fileID: 15600000, guid: aa4ddbb54f04ae94da9a85389920439f, type: 2}
   SplatMapConstraints:
@@ -4623,13 +4606,6 @@ MonoBehaviour:
   buildY: 1
   maxGrid: 4
   gridCounter: 4
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of efc31a6... Added Particles
-=======
->>>>>>> parent of fef251a... Grass adjustments
-=======
->>>>>>> cdb6890faaacdc1a4150fe6307179cb7832be78f
 --- !u!1001 &1630272750
 Prefab:
   m_ObjectHideFlags: 0
