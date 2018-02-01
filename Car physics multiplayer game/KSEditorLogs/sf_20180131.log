@@ -30580,3 +30580,5 @@ SuperSimpleMovement.Update () (at Assets/SineVFX/LivingParticles/Resources/Scrip
 2018-01-31 17:57:15.6151 [INFO] Launching Scene: Test
 2018-01-31 17:57:16.2702 [DEBUG] Connecting
 2018-01-31 17:57:16.2847 [DEBUG] Connecting to room (56359:SceneFusion:SceneFusion) via TCP at ec2-35-162-237-97.us-west-2.compute.amazonaws.com:1027
+2018-01-31 18:02:10.6843 [DEBUG] Sent C:/Users/Tommy-lee Neville/Documents/GitHub/Car-Project/Car physics multiplayer game/KSEditorLogs/SessionLogs/session.56359-636530182362887633.log
+2018-01-31 18:02:26.2740 [DEBUG] Scene Fusion version 1.7.2-0
