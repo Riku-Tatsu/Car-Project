@@ -27,7 +27,7 @@ public class Camera_Chase : MonoBehaviour {
 	{
 		dummyDir = target.forward;
 		prevPos = target.position + -dummyDir * dampingDistance;
-		FlattenedDummyDir = Vector3.ProjectOnPlane(dummyDir, Vector3.up);
+		FlattenedDummyDir = Vector3.ProjectOnPlane(-dummyDir, Vector3.up);
 	}
 	
 	void LateUpdate ()
@@ -44,7 +44,7 @@ public class Camera_Chase : MonoBehaviour {
 		dummyAngle = Vector3.Angle(dummyDir, dirFlattened) * Mathf.Sign(dummyDir.y);
 
 		float maxAngle = Mathf.Clamp(pitchMax + pitch, 0, pitchMax);
-		float minAngle = Mathf.Clamp(pitchMin - pitch, 0, pitchMin);
+		float minAngle = Mathf.Clamp(pitchMin - pitch, pitchMin, 0);
 
 		bool hasFlipped = Mathf.Sign(dummyDir.x) != Mathf.Sign(FlattenedDummyDir.x) && Mathf.Sign(dummyDir.z) != Mathf.Sign(FlattenedDummyDir.z);
 		bool fixPitch = dummyAngle > maxAngle || dummyAngle < minAngle;
@@ -65,13 +65,13 @@ public class Camera_Chase : MonoBehaviour {
 			{
 				newDir = Quaternion.AngleAxis(maxAngle, correctedDirRight) * correctedDir;
 
-				Debug.Log("Fixed Max Pitch, dummy angle " + dummyAngle);
+				//Debug.Log("Fixed Max Pitch, dummy angle " + dummyAngle);
 			}
 			else if(dummyAngle < maxAngle)
 			{
 				newDir = Quaternion.AngleAxis(minAngle, correctedDirRight) * correctedDir;
 
-				Debug.Log("Fixed Min Pitch, dummy angle " + dummyAngle);
+				//Debug.Log("Fixed Min Pitch, dummy angle " + dummyAngle);
 			}
 
 			dummyDir = newDir;

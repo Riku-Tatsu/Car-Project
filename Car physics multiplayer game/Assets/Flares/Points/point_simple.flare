@@ -11,16 +11,16 @@ Flare:
   m_Elements:
   - m_ImageIndex: 0
     m_Position: 0
-    m_Size: 4
+    m_Size: 1
     m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_UseLightColor: 1
-    m_Rotate: 1
-    m_Zoom: 1
+    m_Rotate: 0
+    m_Zoom: 0
     m_Fade: 1
   - m_ImageIndex: 0
     m_Position: 0
-    m_Size: 4
-    m_Color: {r: 0.88235295, g: 1, b: 0.99513185, a: 0.5019608}
+    m_Size: 10
+    m_Color: {r: 0.31617647, g: 0.31617647, b: 0.31617647, a: 0.334}
     m_UseLightColor: 1
     m_Rotate: 0
     m_Zoom: 0
