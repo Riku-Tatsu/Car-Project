@@ -108,8 +108,8 @@ public class CarVisuals_SolidAxel : MonoBehaviour {
 
 		for(int i = 0; i < springPairs.Length; i++)
 		{
-			springPairs[i].springUpper.LookAt(springPairs[i].springLower.position, transform.InverseTransformDirection(springPairs[i].localUpAxis));
-			springPairs[i].springLower.LookAt(springPairs[i].springUpper.position, transform.InverseTransformDirection(springPairs[i].localUpAxis));
+			springPairs[i].springUpper.LookAt(springPairs[i].springLower.position, transform.TransformDirection(springPairs[i].localUpAxis));
+			springPairs[i].springLower.LookAt(springPairs[i].springUpper.position, transform.TransformDirection(springPairs[i].localUpAxis));
 		}
 	}
 }
