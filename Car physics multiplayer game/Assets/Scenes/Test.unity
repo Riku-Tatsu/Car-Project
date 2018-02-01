@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.82226646, g: 0.8305662, b: 0.7451182, a: 1}
+  m_IndirectSpecularColor: {r: 0.49991974, g: 0.74430907, b: 0.78458226, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1345,7 +1345,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4576365798758246, guid: 6e14aab1989af73499778dc65b3dbc68, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: 2.612
       objectReference: {fileID: 0}
     - target: {fileID: 4576365798758246, guid: 6e14aab1989af73499778dc65b3dbc68, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3739,6 +3739,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 301381729}
+    - target: {fileID: 114628134920327186, guid: 0aa175403ca137644aaf8fdd9b01b9e1,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 301381729}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa175403ca137644aaf8fdd9b01b9e1, type: 2}
   m_IsPrefabParent: 0
@@ -4139,6 +4144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0634f943d5c74c3a8412d12a5978c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   terrain: {fileID: 1586862660}
   terrain_data: {fileID: 15600000, guid: aa4ddbb54f04ae94da9a85389920439f, type: 2}
   SplatMapConstraints:
@@ -4606,6 +4612,8 @@ MonoBehaviour:
   buildY: 1
   maxGrid: 4
   gridCounter: 4
+=======
+>>>>>>> 506b3904fa8564b7a0d4b292e6daa73525ced282
 --- !u!1001 &1630272750
 Prefab:
   m_ObjectHideFlags: 0

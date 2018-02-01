@@ -104,6 +104,13 @@ public class CarPhysics : MonoBehaviour {
 	[Space]
 	public float cFreeVelocity = 3.0f;
 
+	[HideInInspector]
+	public bool isBraking;
+	[HideInInspector]
+	public bool isReversing;
+	[HideInInspector]
+	public bool headlightsOn = false;
+
 	Vector4 velocity;
 
 	bool isGrounded;
@@ -219,6 +226,9 @@ public class CarPhysics : MonoBehaviour {
 			}
 
 		}
+
+		isBraking = brakeInput > 0;
+		isReversing = motorInput < 0;
 
 		////HARDCODED DEADZONE FOR NOW////
 
@@ -784,7 +794,7 @@ public class CarPhysics : MonoBehaviour {
 		//driftUse = (Mathf.Abs(driftAngle) - driftAngleInner) / Mathf.Clamp(driftAngleOuter, 0, 90);
 		float driftUse = Mathf.Clamp01(Mathf.InverseLerp(driftAngleInner, driftAngleOuter, Mathf.Abs(driftAngle)));
 		driftUse = Mathf.Pow(driftUse, 1) * usePredict;
-		driftUse = Mathf.Clamp(driftUse, 0, tDriftAbility);
+		driftUse = Mathf.Clamp(driftUse, 0, tDriftAbility * usePredict);
 		driftUse = Mathf.Clamp01(Mathf.Max(driftUse, (wheelForce / friction) - 1));
 
 		Color invis = new Color(1, 0, 0, 0.5f);

@@ -67,7 +67,7 @@ Material:
     - _Glossiness: 0.933
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _MetallicConcentration: 4
+    - _MetallicConcentration: 6.5
     - _MetallicFlakes: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -85,5 +85,5 @@ Material:
     - _PrimaryColor: {r: 0, g: 0, b: 0, a: 1}
     - _PrimaryMetallic: {r: 0, g: 0, b: 0, a: 1}
     - _SecondaryColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SecondaryMetallic: {r: 0, g: 0, b: 0, a: 1}
+    - _SecondaryMetallic: {r: 1.5, g: 1.5, b: 1.5, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
