@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4632754748724478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WC_LF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 33000547282262480}
   - component: {fileID: 23663409293101178}
   - component: {fileID: 64560482540494674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COLLISION
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4622681379192130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VISUALS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4047388160211900}
   - component: {fileID: 33105293484761900}
   - component: {fileID: 23885621367828404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4781110130419402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COLLIDERS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 54086608890336734}
   - component: {fileID: 114011994393919164}
   - component: {fileID: 114728101162640102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car_aerodynamic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4006705859418692}
   - component: {fileID: 33618203457721542}
   - component: {fileID: 23507377155282238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_LF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4375280551567592}
   - component: {fileID: 33644245583358564}
   - component: {fileID: 23813123515157410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4120025471974400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WC_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4222398782504674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WC_LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 4544471715339616}
   - component: {fileID: 33570428423674274}
   - component: {fileID: 23273198515975460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chassi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4301476698096366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WC_RF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4563815059521066}
   - component: {fileID: 33927510851930932}
   - component: {fileID: 23780393987404190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_RF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
