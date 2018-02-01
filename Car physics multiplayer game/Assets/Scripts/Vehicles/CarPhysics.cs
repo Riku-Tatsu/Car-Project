@@ -75,7 +75,8 @@ public class CarPhysics : MonoBehaviour {
 
 	[Header("---Tyres---")]
 	public float tMaxGrip = 1.5f;
-	public float tDriftAbility = 0.5f;
+	public float tBiasFront = 0.495f;
+	public float tDriftAbility = 1.0f;
 
 	public float tPeakAngle = 10.0f;
 	public float tSlipTrail = 0.1f;
@@ -98,9 +99,10 @@ public class CarPhysics : MonoBehaviour {
 	[Header("---Controls---")]
 	public float cSteerMax = 35.0f;
 	public float cSteerSpeed = 8.0f;
-	public float cSteerWeight = 0.0f;
+	public float cSteerWeight = 1.0f;
 	public float cSteerFrontAmount = 1.0f;
 	public float cSteerRearAmount = 0.0f;
+	public bool cRearWheelsCanCounter = true;
 	[Space]
 	public float cFreeVelocity = 3.0f;
 
@@ -235,7 +237,7 @@ public class CarPhysics : MonoBehaviour {
 		float sign = Mathf.Sign(steerInput);
 
 		steerInput = Mathf.Clamp01((Mathf.Abs(steerInput) - 0.1f) / 0.9f);
-		steerInput = Mathf.Pow(steerInput, 3) * sign;
+		steerInput = Mathf.Pow(steerInput, 2) * sign;
 		
 
 		//Debug.DrawRay(transform.position, transform.right * steerInput, Color.white, 0, false);
@@ -437,8 +439,11 @@ public class CarPhysics : MonoBehaviour {
 				float acc = 0;
 				float brk = 0;
 				float rollHeight = 0;
+				float gripBias = 1.0f;
 				if(wheels[i].isFront)
 				{
+					gripBias = tBiasFront * 2;
+
 					acc = accelForce * mBiasFront;
 					brk = brakeForce * bBiasFront;
 
@@ -446,6 +451,8 @@ public class CarPhysics : MonoBehaviour {
 				}
 				else
 				{
+					gripBias = (1 - tBiasFront) * 2;
+
 					acc = accelForce * (1 - mBiasFront);
 
 					if(handbrakeInput)
@@ -461,7 +468,7 @@ public class CarPhysics : MonoBehaviour {
 					rollHeight = sRollHeightRear;
 				}
 
-				RunSuspension(i);
+				RunSuspension(i, gripBias);
 				RunFriction(i, acc, brk, rollHeight);
 			}
 
@@ -514,25 +521,35 @@ public class CarPhysics : MonoBehaviour {
 		//steerAngle = Mathf.Lerp(steerAngle, steerInput * maxSteering, Time.deltaTime * cSteerSpeed);
 
 		float assistSteeringFront = localVelocityFront.z > 1 ? Mathf.Clamp(chassisSteerAngleFront * steerFactorReciprocated, -tPeakAngle, tPeakAngle) : 0;
-		float finalSteeringFront = Mathf.Clamp(assistSteeringFront * (1 - Mathf.Abs(steerInput) * (1 - cSteerWeight)) + (maxSteering * steerInput), -maxSteering, maxSteering);
+		float finalSteeringFront = Mathf.Clamp(assistSteeringFront * (/*(1 - Mathf.Abs(steerInput)) */ (1 - cSteerWeight)) + ((maxSteering) * steerInput), -maxSteering, maxSteering);
 		//finalSteering = Mathf.Clamp(assistSteering * (1 - Mathf.Abs(steerInput)) + steerAngle, -maxSteering, maxSteering);
 		//finalSteering = Mathf.Lerp(assistSteering, maxSteering * Mathf.Sign(steerInput), Mathf.Abs(steerInput));
 
 		float assistSteeringRear = localVelocityRear.z > 1 ? Mathf.Clamp(chassisSteerAngleRear * steerFactorReciprocated, -tPeakAngle, tPeakAngle) : 0;
-		float rearAssistAngle = assistSteeringRear * (1 - Mathf.Abs(steerInput) * (1 - cSteerWeight));
-		float rearSteeringAngle = (maxSteering * steerInput);
+		float rearAssistAngle = assistSteeringRear * (/*(1 - Mathf.Abs(steerInput)) */ (1 - cSteerWeight));
+		float rearSteeringAngle = ((maxSteering) * steerInput);
 		float finalSteeringRear = 0;//Mathf.Clamp((maxSteering * steerInput) - (Mathf.Abs(rearAssistAngle) * Mathf.Sign(steerInput)), -maxSteering, maxSteering);
-		if(Mathf.Abs(rearAssistAngle) > Mathf.Abs(rearSteeringAngle))
+		if (cRearWheelsCanCounter)
 		{
-			finalSteeringRear = 0;
+			finalSteeringRear = rearSteeringAngle - rearAssistAngle * (1 - cSteerWeight);
+			finalSteeringRear = Mathf.Clamp(finalSteeringRear, -maxSteering, maxSteering);
 		}
 		else
 		{
-			finalSteeringRear = Mathf.Max(0, Mathf.Abs(rearSteeringAngle) - Mathf.Abs(rearAssistAngle)) * Mathf.Sign(rearSteeringAngle);
-			//finalSteeringRear = Mathf.Lerp(rearSteeringAngle, (Mathf.Abs(rearSteeringAngle) - Mathf.Abs(rearAssistAngle)) * Mathf.Sign(rearSteeringAngle), Mathf.Abs(rearAssistAngle) / tPeakAngle);
-			finalSteeringRear = Mathf.Clamp(finalSteeringRear, -maxSteering, maxSteering);
+			if (Mathf.Abs(rearAssistAngle) > Mathf.Abs(rearSteeringAngle))
+			{
+				finalSteeringRear = 0;
+			}
+			else
+			{
+				finalSteeringRear = Mathf.Max(0, Mathf.Abs(rearSteeringAngle) - Mathf.Abs(rearAssistAngle)) * Mathf.Sign(rearSteeringAngle);
+				//finalSteeringRear = Mathf.Lerp(rearSteeringAngle, (Mathf.Abs(rearSteeringAngle) - Mathf.Abs(rearAssistAngle)) * Mathf.Sign(rearSteeringAngle), Mathf.Abs(rearAssistAngle) / tPeakAngle);
+				finalSteeringRear = Mathf.Clamp(finalSteeringRear, -maxSteering, maxSteering);
+			}
+
+			finalSteeringRear = Mathf.Lerp(finalSteeringRear, 0, counterAmount);
 		}
-		finalSteeringRear = Mathf.Lerp(finalSteeringRear, 0, counterAmount);
+		
 
 
 
@@ -707,7 +724,7 @@ public class CarPhysics : MonoBehaviour {
 		//Debug.DrawRay(wheels[i].rHit.point, wheels[i].stopPosVector, Color.yellow, 0, false);
 	}
 
-	void RunSuspension(int i)
+	void RunSuspension(int i, float gripBias)
 	{
 		////USEFUL VALUES////
 		float springLerp02 = 0;
@@ -758,7 +775,7 @@ public class CarPhysics : MonoBehaviour {
 		//}
 
 		gripMult = springLerp02;
-		wheels[i].gripMult = gripMult;
+		wheels[i].gripMult = gripMult * gripBias;
 
 		////DEBUGGING////
 
@@ -790,6 +807,9 @@ public class CarPhysics : MonoBehaviour {
 		//usePredict = Mathf.Clamp(usePredict, 0, tDriftAbility);
 		float driftAngleOuter = Mathf.Lerp(90, (90 - tPeakAngle) * 0.5f, usePredict);
 		float driftAngleInner = Mathf.Lerp((90 - tPeakAngle) * 0.5f, 0, usePredict);
+
+		driftAngleOuter = Mathf.Lerp(90, tPeakAngle, usePredict);
+		driftAngleInner = Mathf.Lerp(tPeakAngle, 0, usePredict);
 
 		//driftUse = (Mathf.Abs(driftAngle) - driftAngleInner) / Mathf.Clamp(driftAngleOuter, 0, 90);
 		float driftUse = Mathf.Clamp01(Mathf.InverseLerp(driftAngleInner, driftAngleOuter, Mathf.Abs(driftAngle)));
@@ -838,14 +858,15 @@ public class CarPhysics : MonoBehaviour {
 		wheels[i].spinAmount = driftUse * Mathf.Sign(accelForce);
 		wheels[i].isLocked = isLocked;
 
-		float lateralMult = 1 - driftUse;
+		float lateralMult = 1 - driftUse * 0.5f;
 
 		float counterSteerMult = wheels[i].canSteer && wheels[i].isFront ? Mathf.Lerp(1, 0.5f, counterAmount) : 1;
 
 		Vector3 steerForceVector = Vector3.ProjectOnPlane(wheels[i].wheelPivot.right, wheels[i].rHit.normal).normalized;
 		Vector3 finalSteerForce = steerForceVector * steerForce * friction * lateralMult * counterSteerMult;
 
-		wheelForce *= 1 - ((Mathf.Abs(slipAngle) / 90) * (1 - driftUse) * (1 - Mathf.Clamp01(((Mathf.Abs(wheelForce) / friction) - 0.9f) * 10)) );
+		float longSlip = Mathf.Clamp01((Mathf.Abs(wheelForce) / friction) - 1);
+		wheelForce *= 1 - ( (Mathf.Abs(slipAngle) / 90) * (1 - driftUse) );
 
 		Vector3 longitudinalForce = Vector3.ProjectOnPlane(wheels[i].wheelPivot.forward, wheels[i].rHit.normal).normalized;
 		longitudinalForce *= Mathf.Clamp(wheelForce, -friction, friction);

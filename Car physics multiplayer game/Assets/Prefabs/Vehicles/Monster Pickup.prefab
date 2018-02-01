@@ -1657,7 +1657,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917488144955278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 1.526, z: -5.42}
+  m_LocalPosition: {x: 2.612, y: 1.526, z: -5.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4005726707743570}
@@ -2532,13 +2532,14 @@ MonoBehaviour:
   sRollHeightFront: 0.3
   sRollHeightRear: 0.3
   tMaxGrip: 1.5
+  tBiasFront: 0.495
   tDriftAbility: 1
-  tPeakAngle: 20
+  tPeakAngle: 15
   tSlipTrail: 0.1
   tStopRadius: 0.03
   tStopDamping: 1
   mAcceleration: 3.25
-  mBiasFront: 0.45
+  mBiasFront: 0.43
   mTopSpeedKmh: 110
   mReverseKmh: 50
   bDeceleration: 1.4
@@ -2548,6 +2549,7 @@ MonoBehaviour:
   cSteerWeight: 0.75
   cSteerFrontAmount: 1
   cSteerRearAmount: 1
+  cRearWheelsCanCounter: 1
   cFreeVelocity: 3
   isBraking: 0
   isReversing: 0

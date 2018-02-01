@@ -53,7 +53,7 @@ public class Camera_Chase : MonoBehaviour {
 		{
 			dummyDir = -target.forward;
 
-			Vector3 correctedDir = FlattenedDummyDir;//Vector3.ProjectOnPlane(FlattenedDummyDir, Vector3.up).normalized;
+			Vector3 correctedDir = dirFlattened;//Vector3.ProjectOnPlane(FlattenedDummyDir, Vector3.up).normalized;
 			Vector3 correctedDirRight = Quaternion.AngleAxis(-90, Vector3.up) * correctedDir;
 
 			Debug.DrawRay(transform.position, correctedDir, Color.white, 0, false);
