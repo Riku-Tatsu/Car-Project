@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 8ece5e12da5ec49a0ac9dd2d1ce8954c
+labels:
+- 80s
+- Aesthetics
+- Retro
+- Vaporware
+timeCreated: 1480525262
+licenseType: Store
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Yellowtail
+  fontNames:
+  - Yellowtail
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 217ce7807dc924489b2866cb4f8e2f10, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

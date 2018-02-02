@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 005413fa18c164a3f9035f8d45a3a0b7
+labels:
+- 80s
+- Aesthetics
+- Retro
+- Vaporware
+timeCreated: 1485720649
+licenseType: Store
+AudioImporter:
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

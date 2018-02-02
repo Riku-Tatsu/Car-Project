@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 3b555556e642142dab47446c2853f961
+labels:
+- 80s
+- Aesthetics
+- Retro
+- Vaporware
+timeCreated: 1480526194
+licenseType: Store
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rubik One
+  fontNames:
+  - Rubik One
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 17ada5194cdca446db4409ae5e3e61d2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

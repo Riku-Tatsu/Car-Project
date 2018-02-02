@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 25ad83350e9d34c6da387f18b503403a
+labels:
+- 80s
+- Aesthetics
+- Retro
+- Vaporware
+timeCreated: 1478105150
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Car1Body
+    100002: Car1GrillRear
+    100004: Car1GrillSides
+    100006: Car1WheelFrontLeft
+    100008: Car1WheelFrontRight
+    100010: Car1WheelRearLeft
+    100012: Car1WheelRearRight
+    100014: Car1WheelRimFrontLeft
+    100016: Car1WheelRimFrontRight
+    100018: Car1WheelRimRearLeft
+    100020: Car1WheelRimRearRight
+    100022: //RootNode
+    100024: Body
+    100026: GrillRear
+    100028: GrillSides
+    100030: Mirrors
+    100032: WheelFrontLeft
+    100034: WheelFrontRight
+    100036: WheelRearLeft
+    100038: WheelRearRight
+    100040: WheelRimFrontLeft
+    100042: WheelRimFrontRight
+    100044: WheelRimRearLeft
+    100046: WheelRimRearRight
+    100048: LightsFront
+    100050: LightsRear
+    100052: Number
+    400000: Car1Body
+    400002: Car1GrillRear
+    400004: Car1GrillSides
+    400006: Car1WheelFrontLeft
+    400008: Car1WheelFrontRight
+    400010: Car1WheelRearLeft
+    400012: Car1WheelRearRight
+    400014: Car1WheelRimFrontLeft
+    400016: Car1WheelRimFrontRight
+    400018: Car1WheelRimRearLeft
+    400020: Car1WheelRimRearRight
+    400022: //RootNode
+    400024: Body
+    400026: GrillRear
+    400028: GrillSides
+    400030: Mirrors
+    400032: WheelFrontLeft
+    400034: WheelFrontRight
+    400036: WheelRearLeft
+    400038: WheelRearRight
+    400040: WheelRimFrontLeft
+    400042: WheelRimFrontRight
+    400044: WheelRimRearLeft
+    400046: WheelRimRearRight
+    400048: LightsFront
+    400050: LightsRear
+    400052: Number
+    2300000: Car1Body
+    2300002: Car1GrillRear
+    2300004: Car1GrillSides
+    2300006: Car1WheelFrontLeft
+    2300008: Car1WheelFrontRight
+    2300010: Car1WheelRearLeft
+    2300012: Car1WheelRearRight
+    2300014: Car1WheelRimFrontLeft
+    2300016: Car1WheelRimFrontRight
+    2300018: Car1WheelRimRearLeft
+    2300020: Car1WheelRimRearRight
+    2300022: //RootNode
+    2300024: Body
+    2300026: GrillRear
+    2300028: GrillSides
+    2300030: Mirrors
+    2300032: WheelFrontLeft
+    2300034: WheelFrontRight
+    2300036: WheelRearLeft
+    2300038: WheelRearRight
+    2300040: WheelRimFrontLeft
+    2300042: WheelRimFrontRight
+    2300044: WheelRimRearLeft
+    2300046: WheelRimRearRight
+    2300048: LightsFront
+    2300050: LightsRear
+    2300052: Number
+    3300000: Car1Body
+    3300002: Car1GrillRear
+    3300004: Car1GrillSides
+    3300006: Car1WheelFrontLeft
+    3300008: Car1WheelFrontRight
+    3300010: Car1WheelRearLeft
+    3300012: Car1WheelRearRight
+    3300014: Car1WheelRimFrontLeft
+    3300016: Car1WheelRimFrontRight
+    3300018: Car1WheelRimRearLeft
+    3300020: Car1WheelRimRearRight
+    3300022: //RootNode
+    3300024: Body
+    3300026: GrillRear
+    3300028: GrillSides
+    3300030: Mirrors
+    3300032: WheelFrontLeft
+    3300034: WheelFrontRight
+    3300036: WheelRearLeft
+    3300038: WheelRearRight
+    3300040: WheelRimFrontLeft
+    3300042: WheelRimFrontRight
+    3300044: WheelRimRearLeft
+    3300046: WheelRimRearRight
+    3300048: LightsFront
+    3300050: LightsRear
+    3300052: Number
+    4300000: Car1GrillSides
+    4300002: Car1WheelFrontRight
+    4300004: Car1WheelRimFrontRight
+    4300006: Car1WheelRimRearRight
+    4300008: Car1WheelRearRight
+    4300010: Car1WheelRearLeft
+    4300012: Car1WheelRimRearLeft
+    4300014: Car1WheelRimFrontLeft
+    4300016: Car1GrillRear
+    4300018: Car1WheelFrontLeft
+    4300020: Car1Body
+    4300022: Mirrors
+    4300024: GrillSides
+    4300026: WheelFrontRight
+    4300028: WheelRimFrontRight
+    4300030: WheelRimRearRight
+    4300032: WheelRearRight
+    4300034: WheelRearLeft
+    4300036: WheelRimRearLeft
+    4300038: WheelRimFrontLeft
+    4300040: GrillRear
+    4300042: WheelFrontLeft
+    4300044: Body
+    4300046: Number
+    4300048: LightsRear
+    4300050: LightsFront
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

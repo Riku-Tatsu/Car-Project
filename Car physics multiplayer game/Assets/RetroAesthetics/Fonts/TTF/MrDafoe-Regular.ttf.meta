@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 225cbd6a3721549dea05f9fa2325470b
+labels:
+- 80s
+- Aesthetics
+- Retro
+- Vaporware
+timeCreated: 1480525262
+licenseType: Store
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mr Dafoe
+  fontNames:
+  - Mr Dafoe
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2e17ec009e61045109c17af6bf7b8fcb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
