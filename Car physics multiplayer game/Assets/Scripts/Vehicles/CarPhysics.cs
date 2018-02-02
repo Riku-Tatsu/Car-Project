@@ -56,6 +56,14 @@ public class CarPhysics : MonoBehaviour {
 	public bool isDriving = false;
 	public bool usedByPlayer = false;
 
+	[Header("---Debugging")]
+	public bool debugSuspension = false;
+	public bool debugFriction = false;
+	public bool debugDriftAngle = false;
+	public bool debugStopPoints = false;
+	public bool debugWeight = false;
+	public bool debugRaycast = false;
+
 	[Header("---Physics Info---")]
 	public WheelData[] wheels;
 	public Collider chassisCollider;
@@ -176,7 +184,60 @@ public class CarPhysics : MonoBehaviour {
 
 		wheelbase *= 1f / wheels.Length;
 	}
-	
+
+	private void OnDrawGizmos()
+	{
+		////DEBUGGING////
+
+		if (debugWeight)
+		{
+			//Points of interest
+			HelperMath.DebugDrawCross(transform, steerAngleLocationFront, 0.1f, Color.white, 0);
+			HelperMath.DebugDrawCross(transform, steerAngleLocationRear, 0.1f, Color.white, 0);
+			HelperMath.DebugDrawCross(transform, rBody.centerOfMass, 0.1f, Color.magenta, 0);
+		}
+
+
+
+		for (int i = 0; i < wheels.Length; i++)
+		{
+			if (debugStopPoints)
+			{
+				//Stop Position
+				HelperMath.DebugDrawCross(wheels[i].stopPosWorld, 0.1f, Color.blue, 0);
+				HelperMath.DebugDrawCross(wheels[i].wheelPivot.position, 0.1f, Color.magenta, 0);
+
+				//Wheel trail
+				HelperMath.DebugDrawCross(wheels[i].lastWorldPoses[1], 0.03f, Color.Lerp(Color.yellow, Color.red, 0.333f), 0);
+				HelperMath.DebugDrawCross(wheels[i].lastWorldPoses[2], 0.03f, Color.Lerp(Color.yellow, Color.red, 0.666f), 0);
+				HelperMath.DebugDrawCross(wheels[i].lastWorldPoses[3], 0.03f, Color.red, 0);
+			}
+
+			if (debugSuspension)
+			{
+				//Suspension info
+				Color gripColor = Color.magenta;
+				if (wheels[i].gripMult >= 1)
+				{
+					gripColor = Color.Lerp(Color.black, Color.green, Mathf.Clamp01(wheels[i].gripMult - 1));
+				}
+				else
+				{
+					gripColor = Color.Lerp(Color.red, Color.black, Mathf.Clamp01(wheels[i].gripMult));
+				}
+				Debug.DrawRay(wheels[i].wheelCastPoint.position - transform.up * wheels[i].wheelRadius, wheels[i].rHit.normal * wheels[i].gripMult, gripColor, 0, false);
+			}
+
+			if (debugRaycast)
+			{
+				HelperMath.DebugDrawCross(wheels[i].rHit.point, 0.1f, Color.green, 0);
+				HelperMath.DebugDrawCross(wheels[i].wheelCastPoint.position + -wheels[i].wheelCastPoint.up * sRestDistance, 0.05f, Color.white, 0);
+				Debug.DrawRay(wheels[i].wheelCastPoint.position, -wheels[i].wheelCastPoint.up * sMaxDistance, Color.green, 0, false);
+			}
+
+		}
+	}
+
 	void PollInputs()
 	{
 		if(isDriving)
@@ -240,9 +301,8 @@ public class CarPhysics : MonoBehaviour {
 		steerInput = Mathf.Pow(steerInput, 2) * sign;
 		
 
-		//Debug.DrawRay(transform.position, transform.right * steerInput, Color.white, 0, false);
-		Debug.DrawRay(transform.position, transform.forward * forwardInput, Color.green, 0, false);
-		Debug.DrawRay(transform.position, -transform.forward * reverseInput, Color.red, 0, false);
+		//Debug.DrawRay(transform.position, transform.forward * forwardInput, Color.green, 0, false);
+		//Debug.DrawRay(transform.position, -transform.forward * reverseInput, Color.red, 0, false);
 	}
 
 	void Update()
@@ -342,34 +402,6 @@ public class CarPhysics : MonoBehaviour {
 			}
 			wheels[i].lastWorldPos = wheels[i].wheelCastPoint.position;
 		}
-
-		////DEBUGGING////
-
-		//Points of interest
-		HelperMath.DebugDrawCross(transform, steerAngleLocationFront, 0.1f, Color.white, 0);
-		HelperMath.DebugDrawCross(transform, rBody.centerOfMass, 0.1f, Color.magenta, 0);
-
-	
-		for(int i = 0; i < wheels.Length; i++)
-		{
-			//Wheel trail
-			HelperMath.DebugDrawCross(wheels[i].lastWorldPoses[1], 0.03f, Color.Lerp(Color.yellow, Color.red, 0.333f), 0);
-			HelperMath.DebugDrawCross(wheels[i].lastWorldPoses[2], 0.03f, Color.Lerp(Color.yellow, Color.red, 0.666f), 0);
-			HelperMath.DebugDrawCross(wheels[i].lastWorldPoses[3], 0.03f, Color.red, 0);
-
-			//Suspension info
-			Color gripColor = Color.magenta;
-			if (wheels[i].gripMult >= 1)
-			{
-				gripColor = Color.Lerp(Color.black, Color.white, Mathf.Clamp01(wheels[i].gripMult - 1));
-			}
-			else
-			{
-				gripColor = Color.Lerp(Color.red, Color.black, Mathf.Clamp01(wheels[i].gripMult));
-			}
-			Debug.DrawRay(wheels[i].wheelPivot.position - transform.up * wheels[i].wheelRadius, wheels[i].rHit.normal * wheels[i].gripMult, gripColor, 0, false);
-		}
-
 	}
 
 
@@ -714,29 +746,24 @@ public class CarPhysics : MonoBehaviour {
 
 		wheels[i].stopPosVector = finalStopVector;
 		wheels[i].posVelocityWorld = FlattenLocalYPosition(wheels[i].wheelPivot, avgVel);
-
-
-		//HelperMath.DebugDrawCross(avgPos, 0.1f, Color.blue, 0);
-
-		HelperMath.DebugDrawCross(wheels[i].stopPosWorld, 0.1f, Color.blue, 0);
-		HelperMath.DebugDrawCross(wheels[i].wheelPivot.position, 0.1f, Color.magenta, 0);
-		//Debug.DrawRay(wheels[i].rHit.point, avgVel, Color.green, 0, false);
-		//Debug.DrawRay(wheels[i].rHit.point, wheels[i].stopPosVector, Color.yellow, 0, false);
 	}
 
 	void RunSuspension(int i, float gripBias)
 	{
 		////USEFUL VALUES////
 		float springLerp02 = 0;
+		float gripMult = 0;
 		if (wheels[i].rHit.distance > sRestDistance)
 		{
 			springLerp02 = Mathf.InverseLerp(sMaxDistance, sRestDistance, wheels[i].rHit.distance);
+			gripMult = Mathf.Lerp(0, 1, springLerp02);
 		}
 		else
 		{
 			springLerp02 = 1 + Mathf.InverseLerp(sRestDistance, 0, wheels[i].rHit.distance);
+			gripMult = Mathf.Lerp(1, (sSpring / (wheels.Length * 0.5f)) + 1, springLerp02 - 1);
 		}
-		Debug.DrawRay(wheels[i].rHit.point + Vector3.forward * 0.1f, Vector3.up * springLerp02, Color.green, 0, false);
+		//Debug.DrawRay(wheels[i].rHit.point + Vector3.forward * 0.1f, Vector3.up * springLerp02, Color.green, 0, false);
 
 		////CALCULATE SPRING FORCE////
 
@@ -764,7 +791,6 @@ public class CarPhysics : MonoBehaviour {
 		//float restDist = 1 - (1f / (sSpring * wheels.Length));
 		//restDist *= sMaxDistance;
 
-		float gripMult = 0;
 		//if(wheels[i].rHit.distance > sRestDistance)
 		//{
 		//	gripMult = Mathf.InverseLerp(sMaxDistance, sRestDistance, wheels[i].rHit.distance);
@@ -774,7 +800,7 @@ public class CarPhysics : MonoBehaviour {
 		//	gripMult = 1 + Mathf.InverseLerp(sRestDistance, 0, wheels[i].rHit.distance);
 		//}
 
-		gripMult = springLerp02;
+		//gripMult = springLerp02;
 		wheels[i].gripMult = gripMult * gripBias;
 
 		////DEBUGGING////
@@ -817,9 +843,14 @@ public class CarPhysics : MonoBehaviour {
 		driftUse = Mathf.Clamp(driftUse, 0, tDriftAbility * usePredict);
 		driftUse = Mathf.Clamp01(Mathf.Max(driftUse, (wheelForce / friction) - 1));
 
-		Color invis = new Color(1, 0, 0, 0.5f);
-		HelperMath.DebugDrawCone(wheels[index].wheelPivot, Vector3.zero, driftAngleInner, 0.25f, Color.Lerp(invis, Color.red, usePredict), 0);
-		HelperMath.DebugDrawCone(wheels[index].wheelPivot, Vector3.zero, driftAngleOuter, 0.35f, Color.Lerp(invis, Color.red, driftUse * usePredict), 0);
+		if(debugDriftAngle)
+		{
+			//DEBUGGING DRIFT ANGLE
+			Color invis = new Color(1, 0, 0, 0.5f);
+			HelperMath.DebugDrawCone(wheels[index].wheelPivot, Vector3.zero, driftAngleInner, 0.25f, Color.Lerp(invis, Color.red, usePredict), 0);
+			HelperMath.DebugDrawCone(wheels[index].wheelPivot, Vector3.zero, driftAngleOuter, 0.35f, Color.Lerp(invis, Color.red, driftUse * usePredict), 0);
+		}
+
 
 		return driftUse;
 	}
@@ -896,8 +927,14 @@ public class CarPhysics : MonoBehaviour {
 		finalForce *= 10f / wheels.Length;
 		finalForce = Vector3.ClampMagnitude(finalForce, friction * (2 - driftUse));
 
-		Color debugFrictionColor = Color.Lerp(new Color(1, 1, 1, 0.25f), new Color(1, 0, 0, 0.25f), Mathf.Ceil(driftUse));
-		Debug.DrawRay(wheels[i].rHit.point, finalForce, debugFrictionColor, 0, false);
+		if(debugFriction)
+		{
+			//DEBUG FRICTION
+			Color debugFrictionColor = Color.Lerp(new Color(1, 1, 1, 0.25f), new Color(1, 0, 0, 0.25f), Mathf.Ceil(driftUse));
+			Debug.DrawRay(wheels[i].rHit.point, finalForce, debugFrictionColor, 0, false);
+		}
+
+
 		rBody.AddForceAtPosition(finalForce, wheels[i].rHit.point + transform.up * rollHeight, ForceMode.Acceleration);
 
 
