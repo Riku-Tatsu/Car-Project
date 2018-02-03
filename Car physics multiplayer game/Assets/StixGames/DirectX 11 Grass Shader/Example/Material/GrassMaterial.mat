@@ -51,7 +51,7 @@ Material:
     - _BurnCutoff: 0.05
     - _CullMode: 0
     - _Disorder: 0.3
-    - _EdgeLength: 30
+    - _EdgeLength: 10
     - _GrassFadeEnd: 73.95
     - _GrassFadeStart: 50
     - _LODEnd: 100
@@ -61,7 +61,7 @@ Material:
     - _MaxHeight01: 1.5
     - _MaxHeight02: 1.5
     - _MaxHeight03: 1.5
-    - _MaxTessellation: 3
+    - _MaxTessellation: 4
     - _MinHeight00: 0.3
     - _MinHeight01: 0.2
     - _MinHeight02: 0.2
