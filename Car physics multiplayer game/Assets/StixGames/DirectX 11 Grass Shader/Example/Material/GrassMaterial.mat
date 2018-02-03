@@ -51,12 +51,12 @@ Material:
     - _BurnCutoff: 0.05
     - _CullMode: 0
     - _Disorder: 0.3
-    - _EdgeLength: 10
-    - _GrassFadeEnd: 73.95
-    - _GrassFadeStart: 50
-    - _LODEnd: 100
+    - _EdgeLength: 15
+    - _GrassFadeEnd: 100
+    - _GrassFadeStart: 30
+    - _LODEnd: 50
     - _LODMax: 5
-    - _LODStart: 20
+    - _LODStart: 10
     - _MaxHeight00: 0.5
     - _MaxHeight01: 1.5
     - _MaxHeight02: 1.5
@@ -94,17 +94,17 @@ Material:
     - _WindRotation: 0
     m_Colors:
     - _BurnColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color00: {r: 0.4956593, g: 0.7058824, b: 0.10196076, a: 1}
+    - _Color00: {r: 0.4506438, g: 0.60294116, b: 0.10640134, a: 1}
     - _Color01: {r: 0.5, g: 0.7, b: 0.3, a: 1}
     - _Color02: {r: 0.5, g: 0.7, b: 0.3, a: 1}
     - _Color03: {r: 0.5, g: 0.7, b: 0.3, a: 1}
     - _DensityValues: {r: 1, g: 1, b: 1, a: 1}
     - _GrassBottomColor: {r: 0.35, g: 0.35, b: 0.35, a: 1}
-    - _SecColor00: {r: 0.67058825, g: 0.7058824, b: 0.10196079, a: 1}
+    - _SecColor00: {r: 0.6121166, g: 0.6838235, b: 0.175984, a: 1}
     - _SecColor01: {r: 0.2, g: 0.5, b: 0.15, a: 1}
     - _SecColor02: {r: 0.2, g: 0.5, b: 0.15, a: 1}
     - _SecColor03: {r: 0.2, g: 0.5, b: 0.15, a: 1}
-    - _SpecColor00: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecColor00: {r: 0.21323532, g: 0.21323532, b: 0.21323532, a: 1}
     - _SpecColor01: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpecColor02: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpecColor03: {r: 0.2, g: 0.2, b: 0.2, a: 1}
