@@ -57,12 +57,12 @@ Material:
     - _LODEnd: 100
     - _LODMax: 5
     - _LODStart: 20
-    - _MaxHeight00: 1
+    - _MaxHeight00: 0.5
     - _MaxHeight01: 1.5
     - _MaxHeight02: 1.5
     - _MaxHeight03: 1.5
     - _MaxTessellation: 3
-    - _MinHeight00: 0.8
+    - _MinHeight00: 0.3
     - _MinHeight01: 0.2
     - _MinHeight02: 0.2
     - _MinHeight03: 0.2
@@ -94,13 +94,13 @@ Material:
     - _WindRotation: 0
     m_Colors:
     - _BurnColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color00: {r: 0.5, g: 0.7, b: 0.3, a: 1}
+    - _Color00: {r: 0.4956593, g: 0.7058824, b: 0.10196076, a: 1}
     - _Color01: {r: 0.5, g: 0.7, b: 0.3, a: 1}
     - _Color02: {r: 0.5, g: 0.7, b: 0.3, a: 1}
     - _Color03: {r: 0.5, g: 0.7, b: 0.3, a: 1}
     - _DensityValues: {r: 1, g: 1, b: 1, a: 1}
     - _GrassBottomColor: {r: 0.35, g: 0.35, b: 0.35, a: 1}
-    - _SecColor00: {r: 0.2, g: 0.5, b: 0.15, a: 1}
+    - _SecColor00: {r: 0.67058825, g: 0.7058824, b: 0.10196079, a: 1}
     - _SecColor01: {r: 0.2, g: 0.5, b: 0.15, a: 1}
     - _SecColor02: {r: 0.2, g: 0.5, b: 0.15, a: 1}
     - _SecColor03: {r: 0.2, g: 0.5, b: 0.15, a: 1}
