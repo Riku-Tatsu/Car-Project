@@ -51,7 +51,7 @@ Material:
     - _BurnCutoff: 0.05
     - _CullMode: 0
     - _Disorder: 0.3
-    - _EdgeLength: 20
+    - _EdgeLength: 25
     - _GrassFadeEnd: 100
     - _GrassFadeStart: 30
     - _LODEnd: 50

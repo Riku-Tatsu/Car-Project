@@ -90,12 +90,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _Disorder: 0.2
     - _DstBlend: 0
-    - _EdgeLength: 20
+    - _EdgeLength: 25
     - _EmissionScaleUI: 0
     - _Glossiness: 0.5
     - _GrassFadeDistance: 20
     - _GrassFadeEnd: 100
-    - _GrassFadeStart: 31.77
+    - _GrassFadeStart: 30
     - _LODEnd: 50
     - _LODEndDistance: 50
     - _LODMax: 5
