@@ -90,7 +90,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _Disorder: 0.2
     - _DstBlend: 0
-    - _EdgeLength: 25
+    - _EdgeLength: 10
     - _EmissionScaleUI: 0
     - _Glossiness: 0.5
     - _GrassFadeDistance: 20
@@ -101,17 +101,17 @@ Material:
     - _LODMax: 5
     - _LODStart: 5
     - _LODStartDistance: 20
-    - _MaxHeight00: 0.5
+    - _MaxHeight00: 0.7
     - _MaxHeight01: 1
     - _MaxHeight02: 1
     - _MaxHeight03: 1
-    - _MaxTessellation: 3
+    - _MaxTessellation: 4
     - _Metallic: 0
     - _Metallic00: 0
     - _Metallic01: 0
     - _Metallic02: 0
     - _Metallic03: 0
-    - _MinHeight00: 0.1
+    - _MinHeight00: 0.3
     - _MinHeight01: 1
     - _MinHeight02: 1
     - _MinHeight03: 1

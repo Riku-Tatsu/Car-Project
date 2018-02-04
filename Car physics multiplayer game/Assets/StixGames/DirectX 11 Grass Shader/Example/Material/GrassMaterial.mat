@@ -52,17 +52,17 @@ Material:
     - _CullMode: 0
     - _Disorder: 0.3
     - _EdgeLength: 25
-    - _GrassFadeEnd: 100
-    - _GrassFadeStart: 30
-    - _LODEnd: 50
+    - _GrassFadeEnd: 50
+    - _GrassFadeStart: 20
+    - _LODEnd: 100
     - _LODMax: 5
-    - _LODStart: 5
-    - _MaxHeight00: 0.5
+    - _LODStart: 20
+    - _MaxHeight00: 0.8
     - _MaxHeight01: 1.5
     - _MaxHeight02: 1.5
     - _MaxHeight03: 1.5
     - _MaxTessellation: 4
-    - _MinHeight00: 0.3
+    - _MinHeight00: 0.1
     - _MinHeight01: 0.2
     - _MinHeight02: 0.2
     - _MinHeight03: 0.2
@@ -87,7 +87,7 @@ Material:
     - _TextureAtlasWidth02: 1
     - _TextureAtlasWidth03: 1
     - _TextureCutoff: 0.1
-    - _Width00: 0.05
+    - _Width00: 0.1
     - _Width01: 0.1
     - _Width02: 0.1
     - _Width03: 0.1

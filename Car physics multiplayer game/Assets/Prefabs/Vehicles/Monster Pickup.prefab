@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 33447097918342130}
   - component: {fileID: 23519121975119744}
   - component: {fileID: 64372607391910650}
+  - component: {fileID: 114668828673793038}
   m_Layer: 8
   m_Name: wheelCOL
   m_TagString: Untagged
@@ -411,6 +412,7 @@ GameObject:
   - component: {fileID: 33049095815237600}
   - component: {fileID: 23694045873789810}
   - component: {fileID: 64041137853864592}
+  - component: {fileID: 114670980328630834}
   m_Layer: 8
   m_Name: wheelCOL
   m_TagString: Untagged
@@ -640,6 +642,7 @@ GameObject:
   - component: {fileID: 33995385248785776}
   - component: {fileID: 23280359678848284}
   - component: {fileID: 64159921022782668}
+  - component: {fileID: 114547641915715134}
   m_Layer: 8
   m_Name: wheelCOL
   m_TagString: Untagged
@@ -705,6 +708,7 @@ GameObject:
   - component: {fileID: 33506432402870534}
   - component: {fileID: 23976302256815646}
   - component: {fileID: 64855569007440328}
+  - component: {fileID: 114080690119514610}
   m_Layer: 8
   m_Name: wheelCOL
   m_TagString: Untagged
@@ -2378,6 +2382,57 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: e54c158c1f4bdc8459c0dfb301853f98, type: 3}
+--- !u!114 &114080690119514610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684416053939256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8a6aa74cc560c4498ff64653705e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVertexDistance: 0.5
+  lifetime: 50
+  width:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  strength:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.5
+      value: 2.0009835
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1.5
+      value: 2.0009835
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  material: {fileID: 2100000, guid: 16cc1953eb5c80b4785015153720f017, type: 2}
+  layer: 9
 --- !u!114 &114134436402830582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2472,6 +2527,57 @@ MonoBehaviour:
   flareFullAngle: 10
   flareObscuredAngle: 60
   lightMat: {fileID: 0}
+--- !u!114 &114547641915715134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1602101167273602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8a6aa74cc560c4498ff64653705e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVertexDistance: 0.5
+  lifetime: 50
+  width:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  strength:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 2.0136776
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 2.0136776
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  material: {fileID: 2100000, guid: 16cc1953eb5c80b4785015153720f017, type: 2}
+  layer: 9
 --- !u!114 &114566533468821312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2483,6 +2589,108 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114668828673793038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118027331107696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8a6aa74cc560c4498ff64653705e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVertexDistance: 0.5
+  lifetime: 50
+  width:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  strength:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1.9935428
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1.9935428
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  material: {fileID: 2100000, guid: 16cc1953eb5c80b4785015153720f017, type: 2}
+  layer: 9
+--- !u!114 &114670980328630834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393106831060564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8a6aa74cc560c4498ff64653705e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVertexDistance: 0.5
+  lifetime: 50
+  width:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.35091972
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  strength:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1.9995245
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1.9995245
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  material: {fileID: 2100000, guid: 16cc1953eb5c80b4785015153720f017, type: 2}
+  layer: 9
 --- !u!114 &114977278815223734
 MonoBehaviour:
   m_ObjectHideFlags: 1
