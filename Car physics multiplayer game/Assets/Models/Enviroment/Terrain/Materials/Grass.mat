@@ -90,15 +90,15 @@ Material:
     - _DetailNormalMapScale: 1
     - _Disorder: 0.3
     - _DstBlend: 0
-    - _EdgeLength: 10
+    - _EdgeLength: 4.3
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _GrassFadeEnd: 100
     - _GrassFadeStart: 25
-    - _LODEnd: 50
-    - _LODMax: 6
-    - _LODStart: 25
+    - _LODEnd: 70
+    - _LODMax: 3
+    - _LODStart: 10
     - _MaxHeight00: 0.6
     - _MaxHeight01: 1.5
     - _MaxHeight02: 1.5
@@ -117,7 +117,7 @@ Material:
     - _Smoothness02: 0.5
     - _Smoothness03: 0.5
     - _SmoothnessTextureChannel: 0
-    - _Softness00: 0.5
+    - _Softness00: 1
     - _Softness01: 0.5
     - _Softness02: 0.5
     - _Softness03: 0.5
