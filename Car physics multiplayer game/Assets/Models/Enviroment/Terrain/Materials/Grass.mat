@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Grass
   m_Shader: {fileID: 4800000, guid: 1902925be899f6c4794040c4a1c39b50, type: 3}
-  m_ShaderKeywords: GRASS_CALC_GLOBAL_WIND GRASS_HEIGHT_SMOOTHING GRASS_TOP_VIEW_COMPENSATION
-    GRASS_UNSHADED_LIGHTING GRASS_WIDTH_SMOOTHING SIMPLE_GRASS VERTEX_DENSITY
+  m_ShaderKeywords: GRASS_CALC_GLOBAL_WIND GRASS_HEIGHT_SMOOTHING GRASS_RANDOM_DIR
+    GRASS_UNSHADED_LIGHTING GRASS_WIDTH_SMOOTHING SIMPLE_GRASS_DENSITY VERTEX_DENSITY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GrassTex00:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3f531dada2114724397d3a7de94f5768, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GrassTex01:
@@ -86,27 +86,27 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _BurnCutoff: 0.05
-    - _CullMode: 0
+    - _CullMode: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Disorder: 0.3
+    - _Disorder: 0.7
     - _DstBlend: 0
-    - _EdgeLength: 20
+    - _EdgeLength: 25
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _GrassFadeEnd: 50
+    - _GrassFadeEnd: 100
     - _GrassFadeStart: 20
     - _LODEnd: 25
-    - _LODMax: 3
+    - _LODMax: 1
     - _LODStart: 10
-    - _MaxHeight00: 0.6
+    - _MaxHeight00: 0.7
     - _MaxHeight01: 1.5
     - _MaxHeight02: 1.5
     - _MaxHeight03: 1.5
     - _MaxTessellation: 5
     - _Metallic: 0
-    - _MinHeight00: 0.3
+    - _MinHeight00: 0.6
     - _MinHeight01: 0.2
     - _MinHeight02: 0.2
     - _MinHeight03: 0.2
@@ -124,7 +124,7 @@ Material:
     - _Softness03: 0.5
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Subsurface00: 0.3
+    - _Subsurface00: 0
     - _Subsurface01: 0.3
     - _Subsurface02: 0.3
     - _Subsurface03: 0.3
@@ -136,9 +136,9 @@ Material:
     - _TextureAtlasWidth01: 1
     - _TextureAtlasWidth02: 1
     - _TextureAtlasWidth03: 1
-    - _TextureCutoff: 0.1
+    - _TextureCutoff: 0.031
     - _UVSec: 0
-    - _Width00: 0.1
+    - _Width00: 0.08
     - _Width01: 0.1
     - _Width02: 0.1
     - _Width03: 0.1
@@ -147,18 +147,18 @@ Material:
     m_Colors:
     - _BurnColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-    - _Color00: {r: 0.2369071, g: 0.44852942, b: 0.20117864, a: 1}
+    - _Color00: {r: 0.23690706, g: 0.44852936, b: 0.20117861, a: 1}
     - _Color01: {r: 0.5, g: 0.7, b: 0.29999998, a: 1}
     - _Color02: {r: 0.5, g: 0.7, b: 0.29999998, a: 1}
     - _Color03: {r: 0.5, g: 0.7, b: 0.29999998, a: 1}
     - _DensityValues: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _GrassBottomColor: {r: 0.52205884, g: 0.52205884, b: 0.52205884, a: 1}
-    - _SecColor00: {r: 0.23529413, g: 0.44705886, b: 0.20000002, a: 1}
+    - _SecColor00: {r: 0.2352941, g: 0.44705886, b: 0.19999999, a: 1}
     - _SecColor01: {r: 0.19999996, g: 0.5, b: 0.14999998, a: 1}
     - _SecColor02: {r: 0.19999996, g: 0.5, b: 0.14999998, a: 1}
     - _SecColor03: {r: 0.19999996, g: 0.5, b: 0.14999998, a: 1}
-    - _SpecColor00: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColor00: {r: 0.19999993, g: 0.19999993, b: 0.19999993, a: 1}
     - _SpecColor01: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecColor02: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecColor03: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
