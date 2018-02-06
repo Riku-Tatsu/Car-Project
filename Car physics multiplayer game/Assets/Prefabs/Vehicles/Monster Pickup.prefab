@@ -2027,7 +2027,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7cc91ce1ac8cb6844ad96890da03a450, type: 2}
+  - {fileID: 2100000, guid: e6dc01294e4471549976bb22ab90e18b, type: 2}
   - {fileID: 2100000, guid: 82966e11bf125d84da96d491f344c0c3, type: 2}
   - {fileID: 2100000, guid: dc9ba586a9896504aba9b101c14ddc1f, type: 2}
   - {fileID: 2100000, guid: 0c44fa8e1bdc39e47bc98567d44de9b7, type: 2}
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   tPeakAngle: 15
   tSlipTrail: 0.1
   tStopRadius: 0.03
-  tStopDamping: 1
+  tStopDamping: 10
   mAcceleration: 3.25
   mBiasFront: 0.43
   mTopSpeedKmh: 110
@@ -2725,7 +2725,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7cc91ce1ac8cb6844ad96890da03a450, type: 2}
+  - {fileID: 2100000, guid: e6dc01294e4471549976bb22ab90e18b, type: 2}
   - {fileID: 2100000, guid: ab0850b79e3dd6d408b64547f3aa9a10, type: 2}
   - {fileID: 2100000, guid: dc49e490214014f4b9c96b3ed2701a91, type: 2}
   m_StaticBatchInfo:
@@ -2809,8 +2809,8 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 82966e11bf125d84da96d491f344c0c3, type: 2}
-  - {fileID: 2100000, guid: 7cc91ce1ac8cb6844ad96890da03a450, type: 2}
   - {fileID: 2100000, guid: 7297f8a2e4b0083448cafccc6b7d70c4, type: 2}
+  - {fileID: 2100000, guid: e6dc01294e4471549976bb22ab90e18b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
