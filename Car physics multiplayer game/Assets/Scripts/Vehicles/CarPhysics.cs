@@ -136,6 +136,7 @@ public class CarPhysics : MonoBehaviour {
 	float steerAngleRear = 0;
 	float steerFactor = 0;
 	float steerFactorReciprocated = 0;
+	float accelMult = 0;
 
 	float steerInput;
 	float forwardInput;
@@ -425,6 +426,7 @@ public class CarPhysics : MonoBehaviour {
 		float velKmh = velocity.w * 3.6f;
 		float speedMult = velKmh / mTopSpeedKmh;
 		speedMult = Mathf.Pow(1 - speedMult, 2);
+		accelMult = speedMult;
 		float accelForce = motorInput * mAcceleration * speedMult;
 		float brakeForce = brakeInput * bDeceleration;
 		//if(vel.z > cFreeVelocity)
@@ -840,7 +842,7 @@ public class CarPhysics : MonoBehaviour {
 		//driftUse = (Mathf.Abs(driftAngle) - driftAngleInner) / Mathf.Clamp(driftAngleOuter, 0, 90);
 		float driftUse = Mathf.Clamp01(Mathf.InverseLerp(driftAngleInner, driftAngleOuter, Mathf.Abs(driftAngle)));
 		driftUse = Mathf.Pow(driftUse, 1) * usePredict;
-		driftUse = Mathf.Clamp(driftUse, 0, tDriftAbility * usePredict);
+		driftUse = Mathf.Clamp(driftUse, 0, accelMult * tDriftAbility);
 		driftUse = Mathf.Clamp01(Mathf.Max(driftUse, (wheelForce / friction) - 1));
 
 		if(debugDriftAngle)
@@ -916,7 +918,7 @@ public class CarPhysics : MonoBehaviour {
 				finalStopForce = Vector3.ProjectOnPlane(finalStopForce, wheels[i].rHit.normal).normalized * friction;
 			}
 			finalForce = finalStopForce;
-			driftUse = 0;
+			driftUse = 1;
 		}
 		else
 		{
