@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 54307661317008608}
   - component: {fileID: 114977278815223734}
   - component: {fileID: 114134436402830582}
+  - component: {fileID: 114443195780527842}
   - component: {fileID: 114221254785181278}
   m_Layer: 8
   m_Name: Monster Pickup
@@ -2442,6 +2443,41 @@ MonoBehaviour:
   flareFullAngle: 10
   flareObscuredAngle: 60
   lightMat: {fileID: 0}
+--- !u!114 &114443195780527842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361078855427944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06368bd85c0a6040a62228a31d8abb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshes: []
+  skinnedMeshes:
+  - {fileID: 137347642962876970}
+  wheelInfo:
+  - material: {fileID: 2100000, guid: 698473df9939b4945a08cfac4ab6b25f, type: 2}
+    leftFront: 0
+    rightFront: 1
+    leftRear: 2
+    rightRear: 3
+    segmentsToMatch: 24
+    leftFrontPrevRotation: 0
+    rightFrontPrevRotation: 0
+    leftRearPrevRotation: 0
+    rightRearPrevRotation: 0
+  - material: {fileID: 2100000, guid: 15a2637db752ea147a609749bdab9bcc, type: 2}
+    leftFront: 0
+    rightFront: 1
+    leftRear: 2
+    rightRear: 3
+    segmentsToMatch: 6
+    leftFrontPrevRotation: 0
+    rightFrontPrevRotation: 0
+    leftRearPrevRotation: 0
+    rightRearPrevRotation: 0
 --- !u!114 &114977278815223734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2468,7 +2504,7 @@ MonoBehaviour:
   wheels:
   - wheelPivot: {fileID: 4341166447342926}
     wheelCastPoint: {fileID: 4360167628803044}
-    wheelRadius: 0.6
+    wheelRadius: 0.553
     isLeft: 1
     isFront: 1
     canSteer: 1
@@ -2491,7 +2527,7 @@ MonoBehaviour:
     spinAmount: 0
   - wheelPivot: {fileID: 4662015232025206}
     wheelCastPoint: {fileID: 4729896607191402}
-    wheelRadius: 0.6
+    wheelRadius: 0.553
     isLeft: 0
     isFront: 1
     canSteer: 1
@@ -2514,7 +2550,7 @@ MonoBehaviour:
     spinAmount: 0
   - wheelPivot: {fileID: 4551994237539364}
     wheelCastPoint: {fileID: 4601580740414316}
-    wheelRadius: 0.6
+    wheelRadius: 0.553
     isLeft: 1
     isFront: 0
     canSteer: 1
@@ -2537,7 +2573,7 @@ MonoBehaviour:
     spinAmount: 0
   - wheelPivot: {fileID: 4223964888985804}
     wheelCastPoint: {fileID: 4834427116239582}
-    wheelRadius: 0.6
+    wheelRadius: 0.553
     isLeft: 0
     isFront: 0
     canSteer: 1
@@ -2808,9 +2844,8 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 82966e11bf125d84da96d491f344c0c3, type: 2}
-  - {fileID: 2100000, guid: 7297f8a2e4b0083448cafccc6b7d70c4, type: 2}
-  - {fileID: 2100000, guid: e6dc01294e4471549976bb22ab90e18b, type: 2}
+  - {fileID: 2100000, guid: 15a2637db752ea147a609749bdab9bcc, type: 2}
+  - {fileID: 2100000, guid: 698473df9939b4945a08cfac4ab6b25f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
