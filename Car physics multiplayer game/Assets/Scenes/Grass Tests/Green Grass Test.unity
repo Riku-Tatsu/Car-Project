@@ -1175,6 +1175,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4939708908267682, guid: c242966e323a1f84fa9356fe5d811007,
     type: 2}
   m_PrefabInternal: {fileID: 923262285}
+--- !u!1001 &458867017
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015513556031462, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6245ff5b3542d6a4e8625a4db8607a21, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &497432071 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4672108289675400, guid: 9b02342f830be48409469d1195fefd6e,

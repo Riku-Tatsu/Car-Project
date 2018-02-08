@@ -2627,6 +2627,7 @@ MonoBehaviour:
   isBraking: 0
   isReversing: 0
   headlightsOn: 0
+  accelMult: 0
 --- !u!123 &123018209272949900
 LensFlare:
   m_ObjectHideFlags: 1

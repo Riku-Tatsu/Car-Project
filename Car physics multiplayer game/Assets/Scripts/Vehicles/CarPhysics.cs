@@ -136,7 +136,9 @@ public class CarPhysics : MonoBehaviour {
 	float steerAngleRear = 0;
 	float steerFactor = 0;
 	float steerFactorReciprocated = 0;
-	float accelMult = 0;
+
+	[HideInInspector]
+	public float accelMult = 0;
 
 	float steerInput;
 	float forwardInput;
@@ -906,16 +908,17 @@ public class CarPhysics : MonoBehaviour {
 
 		//finalForce = Vector3.ClampMagnitude(lateralForce * driftMod + longitudinalForce, friction * (2 - driftUse));
 
+		float magClamp = Mathf.Max(Mathf.Sqrt(vel.x * vel.x + vel.z * vel.z), 1);
 
-		Vector3 finalStopForce = -wheels[i].stopPosVector * friction;
-		Vector3 finalForce = finalSteerForce + longitudinalForce;
+		Vector3 finalStopForce = -wheels[i].stopPosVector * Mathf.Min(friction, magClamp);
+		Vector3 finalForce = Vector3.ClampMagnitude(finalSteerForce, magClamp) + longitudinalForce;
 		if(isLocked)
 		{
 			//Vector3.LerpUnclamped(finalSteerForce, finalStopForce, stationaryMult)
 			if(handbrakeInput && !wheels[i].isFront && stationaryMult == 0)
 			{
 				finalStopForce = -rBody.GetPointVelocity(wheels[i].wheelCastPoint.position);
-				finalStopForce = Vector3.ProjectOnPlane(finalStopForce, wheels[i].rHit.normal).normalized * friction;
+				finalStopForce = Vector3.ClampMagnitude(Vector3.ProjectOnPlane(finalStopForce, wheels[i].rHit.normal), Mathf.Min(friction, magClamp));
 			}
 			finalForce = finalStopForce;
 			driftUse = 1;

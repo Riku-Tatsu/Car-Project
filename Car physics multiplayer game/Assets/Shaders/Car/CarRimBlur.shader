@@ -8,6 +8,7 @@
 		_SecondSpecular("Second Specular (Alpha Gloss)", Color) = (0.25,0.25,0.25,0.9)
 		_ThirdColor("Third Diffuse", Color) = (0.1,0.1,0.1,1)
 		_ThirdSpecular("Third Specular (Alpha Gloss)", Color) = (0.5,0.5,0.5,0.85)
+		_DiffuseOcclusion("Diffuse Occlusion Darkness", Range(0,1)) = 0.5
 		_Occlusion("Occlusion Darkness", Range(0,1)) = 0.5
 		_Blur("Blur", Vector) = (0,0,0,0)
 
@@ -25,16 +26,26 @@
 		#pragma target 3.0
 
 		//float BinaryDither4x4(float value, float2 sceneUVs)
-		float BinaryDither4x4(float value, float2 pos) {
+		float BinaryDither4x4(float value, float2 pos, float sign) {
 			float4x4 mtx = float4x4(
-				float4(1,  9,  3, 11) / 17.0,
-				float4(13, 5, 15,  7) / 17.0,
+				float4(1,  11,  3, 9) / 17.0,
+				float4(13, 7, 15,  5) / 17.0,
 				float4(4, 12,  2, 10) / 17.0,
 				float4(16, 8, 14,  6) / 17.0
 				);
+			//if (sign < 0)
+			//{
+			//	mtx = float4x4(
+			//	float4(1, 9, 3, 11) / 17.0,
+			//	float4(13, 5, 15, 7) / 17.0,
+			//	float4(4, 12, 2, 10) / 17.0,
+			//	float4(16, 8, 14, 6) / 17.0
+			//		);
+			//}
+
 			float2 px = floor(_ScreenParams.xy * pos);
-			int xSmp = fmod(px.x,4);
-			int ySmp = fmod(px.y,4);
+			int xSmp = fmod(px.x + saturate(sign),2);
+			int ySmp = fmod(px.y + saturate(sign),2);
 			float4 xVec = 1 - saturate(abs(float4(0,1,2,3) - xSmp));
 			float4 yVec = 1 - saturate(abs(float4(0,1,2,3) - ySmp));
 			float4 pxMult = float4(dot(mtx[0],yVec), dot(mtx[1],yVec), dot(mtx[2],yVec), dot(mtx[3],yVec));
@@ -42,6 +53,7 @@
 		}
 
 		sampler2D _MainTex;
+		float _FrameSign;
 
 		struct Input {
 			float2 uv_MainTex;
@@ -59,6 +71,7 @@
 		uniform half4 _SecondSpecular;
 		uniform half3 _ThirdColor;
 		uniform half4 _ThirdSpecular;
+		uniform fixed _DiffuseOcclusion;
 		uniform fixed _Occlusion;
 		uniform half4 _Blur;
 
@@ -101,7 +114,7 @@
 			fixed3 finalMask = fixed3(saturate(leftTile.rg + rightTile.rg), blueChannel);
 
 			float2 pos = (IN.screenPos.xy / IN.screenPos.w);
-			clip( BinaryDither4x4(finalMask.b - 1.5, pos) );
+			clip( BinaryDither4x4(finalMask.b - 1.5, pos, _FrameSign) );
 
 
 
@@ -109,7 +122,7 @@
 			half3 diffuse = lerp(_FirstColor, lerp(_SecondColor, _ThirdColor, finalMask.g), finalMask.r);
 			half4 specular = lerp(_FirstSpecular, lerp(_SecondSpecular, _ThirdSpecular, finalMask.g), finalMask.r);
 
-			o.Albedo = diffuse.rgb * _Color.rgb;
+			o.Albedo = diffuse.rgb * _Color.rgb * max(IN.vCol.b, _DiffuseOcclusion);;
 
 			o.Specular = specular.rgb;
 			o.Smoothness = specular.a;
