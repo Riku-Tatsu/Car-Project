@@ -136,7 +136,7 @@ public class CarPhysics : MonoBehaviour {
 	float steerAngleRear = 0;
 	float steerFactor = 0;
 	float steerFactorReciprocated = 0;
-	float accelMult = 0;
+	public float accelMult = 0;  // <============================================ temporarily public for testing engine sound
 
 	float steerInput;
 	float forwardInput;
@@ -429,6 +429,7 @@ public class CarPhysics : MonoBehaviour {
 		accelMult = speedMult;
 		float accelForce = motorInput * mAcceleration * speedMult;
 		float brakeForce = brakeInput * bDeceleration;
+
 		//if(vel.z > cFreeVelocity)
 		//{
 		//	float speedMult = velKmh / mTopSpeedKmh;
