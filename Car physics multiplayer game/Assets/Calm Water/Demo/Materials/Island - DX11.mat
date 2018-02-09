@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Island - DX11
+  m_Shader: {fileID: 4800000, guid: c960b2fa5c6943a47bf5f9dbab77ea35, type: 3}
+  m_ShaderKeywords: _BUMPLARGE_ON _DEPTHFOG_ON _DISPLACEMENTMODE_GERSTNER _DISPLACEMENT_ON
+    _DISTORTIONQUALITY_HIGH _EMISSION _FOAM_ON _NORMALMAP _REFLECTIONTYPE_REALTIME
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 26409920616e41e44bcf1e1d60dcbfb2, type: 3}
+        m_Scale: {x: 40, y: 40}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLarge:
+        m_Texture: {fileID: 2800000, guid: 53b37497d99969441afb31a0e1743866, type: 3}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 39b57397df78c0c44a8f13e715e91a6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTex:
+        m_Texture: {fileID: 2800000, guid: f3ed797cad96fec41b94d8626de3f1ab, type: 3}
+        m_Scale: {x: 50, y: 50}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Amplitude: 2.67
+    - _BumpLargeStrength: 0.616
+    - _BumpScale: 1
+    - _BumpStrength: 0.55
+    - _Cutoff: 0.5
+    - _DISPLACEMENT: 1
+    - _Depth: 2
+    - _DetailNormalMapScale: 1
+    - _DisplacementMode: 2
+    - _Distortion: 48.5
+    - _DistortionQuality: 0
+    - _DstBlend: 0
+    - _EdgeFade: 3.63
+    - _EnableFog: 1
+    - _EnableLargeBump: 1
+    - _FOAM: 1
+    - _FoamSize: 1.76
+    - _Frequency: 3.21
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Reflection: 0.898
+    - _ReflectionType: 2
+    - _RimPower: 4.6
+    - _Smoothing: 1
+    - _Smoothness: 1.06
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _Speed: 1
+    - _SpeedX: 0.5
+    - _SpeedY: 0.5
+    - _SrcBlend: 1
+    - _Steepness: 0.54
+    - _Tess: 16.8
+    - _UVSec: 0
+    - _WorldSpace: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.45009732, g: 0.8161765, b: 0.74043596, a: 1}
+    - _CubeColor: {r: 0.68950045, g: 0.7736711, b: 0.8014706, a: 1}
+    - _DepthColor: {r: 0.049956758, g: 0.2895687, b: 0.32352942, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.72794116, g: 0.72794116, b: 0.72794116, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Speeds: {r: 0.5, g: 0.5, b: 0.25, a: 0.25}
+    - _SpeedsLarge: {r: -0.5, g: 0.25, b: 0, a: 0}
+    - _WDirectionAB: {r: -0.17, g: 0.55, b: -0.62, a: -0.25}
+    - _WDirectionCD: {r: 0.44, g: 0.71, b: 0.41, a: 0.5}
+    - _WSpeed: {r: 0.35, g: 0.5, b: 0.35, a: 0.5}
