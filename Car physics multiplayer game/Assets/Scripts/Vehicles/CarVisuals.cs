@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CarVisuals : MonoBehaviour {
+public class CarVisuals : NetworkBehaviour {
 
 	[System.Serializable]
 	public class VisualData
@@ -31,11 +32,18 @@ public class CarVisuals : MonoBehaviour {
 	{
 		if(carScript)
 		{
-			UpdateVisuals();
+			CmdUpdateVisuals();
 		}
 	}
 
-	void UpdateVisuals()
+    [Command]
+    public void CmdUpdateVisuals()
+    {
+        RpcUpdateVisuals();
+    }
+
+    [ClientRpc]
+	public void RpcUpdateVisuals()
 	{
 		for(int i = 0; i < vData.Length; i++)
 		{

@@ -11,7 +11,7 @@ public class MonsterPickupNetSetupScript : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
-            GetComponent<CarPhysics>().enabled = true;
+            //GetComponent<CarPhysics>().enabled = true;
             Camera.main.GetComponent<Camera_Chase>().target = transform;
         }	
 	}

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CarVisuals_SolidAxel : MonoBehaviour {
+public class CarVisuals_SolidAxel : NetworkBehaviour {
 
 	[System.Serializable]
 	public class AxelData
@@ -60,6 +61,7 @@ public class CarVisuals_SolidAxel : MonoBehaviour {
 		}
 	}
 
+    
 	void LateUpdate ()
 	{
 		for(int i = 0; i < axelData.Length; i++)
@@ -112,4 +114,5 @@ public class CarVisuals_SolidAxel : MonoBehaviour {
 			springPairs[i].springLower.LookAt(springPairs[i].springUpper.position, transform.TransformDirection(springPairs[i].localUpAxis));
 		}
 	}
+
 }
