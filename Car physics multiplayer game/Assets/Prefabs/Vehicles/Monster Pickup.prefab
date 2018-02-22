@@ -2018,7 +2018,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361078855427944}
   m_LocalRotation: {x: -0, y: -0.9780775, z: -0, w: -0.2082417}
-  m_LocalPosition: {x: 5.810438, y: -7.7024117, z: 28.786049}
+  m_LocalPosition: {x: 7.014733, y: -7.7024117, z: 24.510847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4703088447351626}
@@ -2499,10 +2499,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 3
-  m_SendInterval: 0
+  m_SendInterval: 0.11111111
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
-  m_SyncSpin: 0
+  m_SyncSpin: 1
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5
@@ -2777,6 +2777,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce1c7e128d1a9140b00eccbe1205a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncedPlayerInputs:
+    steer: 0
+    forward: 0
+    reverse: 0
+    handBrake: 0
+  syncRBRot: {x: 0, y: 0, z: 0, w: 0}
+  syncRBPos: {x: 0, y: 0, z: 0}
+  lerpRate: 15
 --- !u!114 &114977278815223734
 MonoBehaviour:
   m_ObjectHideFlags: 1

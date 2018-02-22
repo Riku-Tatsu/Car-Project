@@ -8,8 +8,20 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
     private CarPhysics carController;
 
     [SyncVar]
-    public PlayerInputs playerInputs = new PlayerInputs();
+    public PlayerInputs syncedPlayerInputs = new PlayerInputs();
 
+    [SyncVar]
+    public Quaternion syncRBRot;
+
+    [SyncVar]
+    public Vector3 syncRBPos;
+
+    [SerializeField]
+    float lerpRate = 15;
+
+    private Rigidbody rb;
+
+    [System.Serializable]
     public class PlayerInputs
     {
        public float steer;
@@ -31,6 +43,7 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
     {
         carController = GetComponent<CarPhysics>();
         carController.VehicleNetworkManager = this;
+        rb = GetComponent<Rigidbody>();
 
         if (isLocalPlayer)
             carController.usedByPlayer = true;
@@ -44,21 +57,52 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
-            UpdateOtherCarInputs(playerInputs);
-        }	
+            UpdateOtherCarInputs(syncedPlayerInputs);
+        }
+       
 	}
 
-    [Command]
-    public void CmdUpdateInputs(float steer, float forward, float reverse, bool handBrake)
+    void FixedUpdate()
     {
-        playerInputs.steer = steer;
-        playerInputs.forward = forward;
-        playerInputs.reverse = reverse;
-        playerInputs.handBrake = handBrake;
+        TransmitRBVal();
+        LerpRBValues();
+    }
+
+    [Command]
+    public void CmdUpdateInputs(PlayerInputs playerInputs)
+    {
+        syncedPlayerInputs = playerInputs;
+    }
+
+    public void GrabPlayerInputs(float steer, float forward, float reverse, bool handBrake)
+    {
+        syncedPlayerInputs.steer = steer;
+        syncedPlayerInputs.forward = forward;
+        syncedPlayerInputs.reverse = reverse;
+        syncedPlayerInputs.handBrake = handBrake;
+
+        CmdUpdateInputs(syncedPlayerInputs);
+
 
     }
 
-    
+    [Command]
+    public void CmdUpdateSyncedRBPos(Vector3 pos, Quaternion rot)
+    {
+        syncRBPos = pos;
+        syncRBRot = rot;
+    }
+
+    [ClientCallback]
+    public void TransmitRBVal()
+    {
+        if (isLocalPlayer)
+        {
+            CmdUpdateSyncedRBPos(rb.position, rb.rotation);
+        }
+    }
+
+    [ClientCallback]
     public void UpdateOtherCarInputs(PlayerInputs playerInput)
     {
         carController.steerInput = playerInput.steer;
@@ -66,5 +110,17 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
         carController.reverseInput = playerInput.reverse;
         carController.handbrakeInput = playerInput.handBrake;
     }
+
+    [ClientCallback]
+    void LerpRBValues()
+    {
+        if (!isLocalPlayer)
+        {
+            rb.position = Vector3.Lerp(rb.position, syncRBPos, Time.deltaTime * lerpRate);
+            rb.rotation = Quaternion.Slerp(rb.rotation, syncRBRot, Time.deltaTime * lerpRate);
+        }
+    }
+
+
 
 }
