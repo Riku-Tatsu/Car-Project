@@ -377,7 +377,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230773023367156}
   m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.22, y: 0.266, z: -5.52}
+  m_LocalPosition: {x: 7.8165355, y: -7.4524117, z: 31.068565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4781110130419402}
@@ -702,6 +702,12 @@ MonoBehaviour:
   handbrake: Handbrake
   isDriving: 0
   usedByPlayer: 0
+  debugSuspension: 0
+  debugFriction: 0
+  debugDriftAngle: 0
+  debugStopPoints: 0
+  debugWeight: 0
+  debugRaycast: 0
   wheels:
   - wheelPivot: {fileID: 4632754748724478}
     wheelCastPoint: {fileID: 4632754748724478}
@@ -806,6 +812,7 @@ MonoBehaviour:
   sRollHeightFront: 0
   sRollHeightRear: 0.025
   tMaxGrip: 1.5
+  tBiasFront: 0.495
   tDriftAbility: 0.75
   tPeakAngle: 10
   tSlipTrail: 0.1
@@ -822,7 +829,16 @@ MonoBehaviour:
   cSteerWeight: 0
   cSteerFrontAmount: 1
   cSteerRearAmount: 0
+  cRearWheelsCanCounter: 1
   cFreeVelocity: 3
+  isBraking: 0
+  isReversing: 0
+  headlightsOn: 0
+  accelMult: 0
+  steerInput: 0
+  forwardInput: 0
+  reverseInput: 0
+  handbrakeInput: 0
 --- !u!114 &114728101162640102
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -57,10 +57,14 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
-            UpdateOtherCarInputs(syncedPlayerInputs);
+            UpdateOtherCarInputs(syncedPlayerInputs);   
         }
-       
-	}
+
+        if (isServer)
+        {
+            RpcUpdateServerCloneVehicles(syncedPlayerInputs);
+        }
+    }
 
     void FixedUpdate()
     {
@@ -109,6 +113,15 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
         carController.forwardInput = playerInput.forward;
         carController.reverseInput = playerInput.reverse;
         carController.handbrakeInput = playerInput.handBrake;
+    }
+
+    [ClientRpc]
+    private void RpcUpdateServerCloneVehicles(PlayerInputs playerInputs)
+    {
+        carController.steerInput = playerInputs.steer;
+        carController.forwardInput = playerInputs.forward;
+        carController.reverseInput = playerInputs.reverse;
+        carController.handbrakeInput = playerInputs.handBrake;
     }
 
     [ClientCallback]
