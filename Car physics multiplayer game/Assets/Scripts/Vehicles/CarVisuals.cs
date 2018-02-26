@@ -30,18 +30,12 @@ public class CarVisuals : MonoBehaviour {
 	{
 		if(carScript)
 		{
-			CmdUpdateVisuals();
+			UpdateVisuals();
 		}
 	}
 
-    //[Command]
-    public void CmdUpdateVisuals()
-    {
-        RpcUpdateVisuals();
-    }
 
-    //[ClientRpc]
-	public void RpcUpdateVisuals()
+	public void UpdateVisuals()
 	{
 		for(int i = 0; i < vData.Length; i++)
 		{

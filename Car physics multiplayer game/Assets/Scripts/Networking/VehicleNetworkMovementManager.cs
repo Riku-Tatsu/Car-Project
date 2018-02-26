@@ -53,16 +53,21 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void LateUpdate ()
     {
-        if (!isLocalPlayer)
-        {
-            UpdateOtherCarInputs(syncedPlayerInputs);   
-        }
+        //if (!isLocalPlayer)
+        //{
+        //    UpdateOtherCarInputs(syncedPlayerInputs);   
+        //}
+
+        //if (isServer)
+        //{
+        //    RpcUpdateServerCloneVehicles(syncedPlayerInputs);
+        //}
 
         if (isServer)
         {
-            RpcUpdateServerCloneVehicles(syncedPlayerInputs);
+            RpcUpdateOtherCarInputs(syncedPlayerInputs);
         }
     }
 
@@ -106,9 +111,10 @@ public class VehicleNetworkMovementManager : NetworkBehaviour
         }
     }
 
-    [ClientCallback]
-    public void UpdateOtherCarInputs(PlayerInputs playerInput)
+    [ClientRpc]
+    public void RpcUpdateOtherCarInputs(PlayerInputs playerInput)
     {
+        if(!isLocalPlayer)
         carController.steerInput = playerInput.steer;
         carController.forwardInput = playerInput.forward;
         carController.reverseInput = playerInput.reverse;

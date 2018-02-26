@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class CarVisuals_SolidAxel : NetworkBehaviour {
+public class CarVisuals_SolidAxel : MonoBehaviour {
 
 	[System.Serializable]
 	public class AxelData

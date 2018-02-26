@@ -253,7 +253,10 @@ public class CarPhysics : MonoBehaviour {
 				reverseInput = Input.GetAxisRaw(reverse);
 				handbrakeInput = Input.GetButton(handbrake);
 
-                VehicleNetworkManager.GrabPlayerInputs(steerInput, forwardInput, reverseInput, handbrakeInput);
+                if (VehicleNetworkManager)
+                {
+                    VehicleNetworkManager.GrabPlayerInputs(steerInput, forwardInput, reverseInput, handbrakeInput);
+                }
 			}
 			else
 			{
