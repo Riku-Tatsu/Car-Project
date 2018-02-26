@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CarVisuals : MonoBehaviour {
 
 	[System.Serializable]
@@ -35,7 +34,8 @@ public class CarVisuals : MonoBehaviour {
 		}
 	}
 
-	void UpdateVisuals()
+
+	public void UpdateVisuals()
 	{
 		for(int i = 0; i < vData.Length; i++)
 		{

@@ -140,13 +140,15 @@ public class CarPhysics : MonoBehaviour {
 	[HideInInspector]
 	public float accelMult = 0;
 
-	float steerInput;
-	float forwardInput;
-	float reverseInput;
-	bool handbrakeInput;
+	public float steerInput;
+	public float forwardInput;
+	public float reverseInput;
+	public bool handbrakeInput;
 
 	float motorInput;
 	float brakeInput;
+
+    public VehicleNetworkMovementManager VehicleNetworkManager { get; set; }
 
 	void Start ()
 	{
@@ -240,7 +242,6 @@ public class CarPhysics : MonoBehaviour {
 
 		}
 	}
-
 	void PollInputs()
 	{
 		if(isDriving)
@@ -251,6 +252,11 @@ public class CarPhysics : MonoBehaviour {
 				forwardInput = Input.GetAxisRaw(forward);
 				reverseInput = Input.GetAxisRaw(reverse);
 				handbrakeInput = Input.GetButton(handbrake);
+
+                if (VehicleNetworkManager)
+                {
+                    VehicleNetworkManager.GrabPlayerInputs(steerInput, forwardInput, reverseInput, handbrakeInput);
+                }
 			}
 			else
 			{

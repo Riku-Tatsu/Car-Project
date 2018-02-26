@@ -60,6 +60,7 @@ public class CarVisuals_SolidAxel : MonoBehaviour {
 		}
 	}
 
+    
 	void LateUpdate ()
 	{
 		for(int i = 0; i < axelData.Length; i++)
@@ -112,4 +113,5 @@ public class CarVisuals_SolidAxel : MonoBehaviour {
 			springPairs[i].springLower.LookAt(springPairs[i].springUpper.position, transform.TransformDirection(springPairs[i].localUpAxis));
 		}
 	}
+
 }
